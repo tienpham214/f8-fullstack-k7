@@ -1,0 +1,64 @@
+/* p {
+    color: red;
+  }
+
+  h2{
+    color: aliceblue;
+    background-color: blue;
+  }
+
+  #title{
+    color: red;
+  }
+
+  title{
+    color: blue;
+  }
+
+  h3{
+    color: black;
+    background-color: yellow;
+  } */
+
+/* chọn tất cả thuộc tính 
+  *{
+    color: aqua;
+  }*/
+
+/* 
+  .box .title{
+    color: red;
+  }
+
+  .wrapper .title{
+    color: blue;
+  } */
+
+.box > .title {
+
+    color: brown;
+}
+
+
+/* .menu > li > a {
+    color: green;
+}
+
+
+.menu > ul > li > a {
+    color: red;
+} */
+
+/* .menu >  ul > ul > li > a {
+
+    color: yellow;
+} */
+
+/* .menu ul a {
+    color: #6b0101;
+} */
+
+
+.menu li a {
+    color: #53f800;
+}

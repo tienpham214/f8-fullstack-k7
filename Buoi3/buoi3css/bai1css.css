@@ -1,0 +1,77 @@
+html{
+    font-family: cursive, Cambria, Cochin, Georgia, Times, 'Times New Roman', serif
+ }
+
+/* css nội dung thành khối block linh hoạt */
+ .contact-wrapper{
+    display: flex;
+ }
+
+ section{
+    padding-left:20px;
+ }
+
+ /* ẩn icon list menu li*/
+ .list-info{
+    list-style: none;
+    margin-left: -30px;
+ }
+
+ /* đổi màu list item, điều chỉnh vị trí item */
+ .list-item{
+    color: #b1adad;
+    padding: 12px 0 12px 0;
+    display: flex;
+    width: 54%;
+    vertical-align: top;
+    
+ }
+
+ .list-item > i {
+    font-size: 16px;
+    padding-right: 15px;
+ }
+
+
+/* css form tác động vào input chung */
+.contact-form-input{
+    padding-top: 10px;
+}
+ .contact-form-input > * {
+    width: 98.5%;
+    height: 25px;
+    border: 1px solid rgb(215, 215, 215);
+}
+
+/* .box-message > *
+    {
+        width: 72%;
+        height: 20px;
+        border: 1px solid rgb(215, 215, 215);
+        padding: 15px 0 10px 0;
+    }
+     */
+    #message {
+        border: 1px solid rgb(215, 215, 215);
+        margin-top: 10px;
+      }
+
+
+#submit{
+    border: 0;
+    color: white;
+    width: 130px;
+    height: 35px;
+    background: rgb(10, 205, 192);
+}
+
+::placeholder {
+    padding-left: 5px;
+    font-size: 13px;
+    font-family: cursive;
+}
+
+.con{
+    text-decoration:underline;
+    text-decoration-color:yellow;
+}

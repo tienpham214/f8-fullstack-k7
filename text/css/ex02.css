@@ -1,0 +1,38 @@
+/* Thuộc tính font-size: thay đổi cỡ chữ,
+
+Cú pháp: font-size: value + unit
+
+- px
+- em
+- rem
+*/
+/* Lưu ý font-size là thuộc tính kế thừa nên là nó tương đối thành phần cha, vd body có font chữ bao nhiêu, thì css sẽ có tỷ lệ tương đối với cha */
+/* Thuộc tính cao nhất khi ta code bằng thẻ html thì font-size mặc định sẽ thay đổi  */
+
+/* Nếu dùng html là cỡ 10 thì thuộc tính rem thì lấy giá trị đó x10 */
+html{
+    /* font-size: 10px; */
+    /* ta quy đổi là 10/16 x100 = 62.5% */
+    font-size: 62.5%; 
+}
+body{
+    font-size: 1.6rem;
+}
+/* .content{
+    font-size: 1.5em;
+}
+
+.content p{
+    font-size: 2em;
+} */
+
+
+.content h2{
+    font-size: 2.9rem;
+}
+
+
+.content p{
+    font-size: 2rem;
+}
+

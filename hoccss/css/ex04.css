@@ -1,0 +1,58 @@
+/* Thành phần giả
+- Cú pháp selector::pseudo-element 
+{
+
+}*/
+
+
+/* vd: 
+::before
+::after
+::first-line
+::first-letter
+::selection
+::placeholder */
+
+/* Phần tử nằm trước, bắt buộc có thuộc tính content */
+h1::before{
+    content: "a";
+}
+
+/* Phần tử nằm sau, bắt buộc có thuộc tính content */
+h1::after{
+    content: "b";
+}
+
+
+/* lệnh sẽ lấy giá trị của data-index */
+.title::before{
+    content: attr(data-index);
+}
+
+
+/* Thiết lập dòng nội dung đầu tiên màu đỏ */
+p::first-line{
+    color: red;
+}
+
+/* Thiết lập chữ cái đầu tiên có màu sắc */
+p::first-letter{
+    color: green;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+/* Thiết chọn văn bản, chỉ thay đổi được màu chữ và màu nền, khi mình dùng chuột bôi đen, như bôi đen văn bản */
+p::selection{
+    background-color:rgb(196, 0, 0);
+    color: white;
+}
+
+input::placeholder{
+    color: red;
+    font-style: italic;
+    font-weight: bold;
+}
+
+
+

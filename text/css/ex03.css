@@ -1,0 +1,67 @@
+/* Thuộc tính line-height
+Thiết lập độ cao văn bản 
+
+line-height : có giá có đơn vị, font cỡ bao nhiêu thì đơn vị cũng tăng theo */
+/* còn nếu line-height ko dùng đơn vị thì khi cỡ chữ tăng lên bao nhiêu thì line-height cũng tăng theo */
+/* .content{
+    line-height: 34px;
+    font-size: 20px;
+} */
+
+/* Thuộc tính font-family: thiết lập thuộc tính font văn bản
+
+cú pháp: font-family: font1, font2, font3,....
+*/
+
+/* Cách dùng import font chữ vào máy dùng @font-face */
+@font-face {
+    font-family: OpenSans;
+    src: url(/text/font/OpenSans-Bold.ttf);
+    font-style: normal;
+}
+
+@font-face {
+    font-family: OpenSans;
+    src: url(/text/font/OpenSans-LightItalic.ttf);
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: OpenSans;
+    src: url(/text/font/OpenSans-MediumItalic.ttf);
+    font-style: italic;
+}
+
+
+@font-face {
+    font-family: OpenSans;
+    src: url(/text/font/OpenSans-SemiBoldItalic.ttf);
+    font-style: italic;
+}
+
+
+/* Font ko chân thì là sans-serif; font có chân thì là họ serif, trường hợp ta dùng thêm sans-serif khi mà mạng ko tải được font chính */
+
+
+/* giá trị font-weight
+light là 300; regular là 400; medium là 500; semi bold là 600; bold là 700; */
+
+body{
+    /* font-family: Arial, Helvetica, sans-serif; */
+    font-family: OpenSans, sans-serif;
+    font-weight: 500;
+    font-style: italic;
+
+}
+.content{
+    font-size: 20px;
+    line-height: 1.5;
+
+   
+}
+
+p{
+    font-family: Madimi one;
+}
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Các thẻ HTML hay dùng trong nhóm Inline</title>
+  </head>
+  <body>
+    <!-- 1. thẻ chèn liên kết sử dụng cặp thẻ a
+    target: Mục tiêu khi click vào liên kết (_target = Tab mới, _self = Tab hiện tại)
+ -->
+    <a href="dia_chi_trang_web">Noi dung 1</a> <br />
+    <a href="dia_chi_trang_web" target="_blank">Noi dung 2</a>
+
+    <!-- Thẻ chèn hình ảnh là img, trong đó có các thuộc tính:
+    width: Chiều rộng
+    height: Chiều cao
+    title: Tiêu đề khi trỏ chuột vào ảnh
+    alt: Tiêu đề khi ảnh lỗi                  -->
+
+    <img src="link ảnh" alt="nội dung miêu tả ảnh" />
+
+    <!-- Thẻ xuống dòng là thẻ br có thể dùng thẻ đóng hoặc mở <br>; hoặc </br> -->
+    <br />
+
+    <!-- Thẻ in đậm (strong, b) -->
+    <p>
+      <strong>
+        Đoạn văn cần in đậm thì cho thêm thẻ strong vào đoạn văn
+      </strong>
+    </p>
+
+    <p>
+      Đoạn văn cần in <b>đậm</b> thì cho thêm thẻ strong vào đoạn
+      <strong>văn</strong>
+    </p>
+
+    <!-- Thẻ trích dẫn là blockquote -->
+    <blockquote>
+      <h3>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fugit, vitae!
+      </h3>
+    </blockquote>
+
+    <!-- Thẻ pre là thẻ thể hiện nội dung trả về từ server trả về, xem sự so sánh với div-->
+
+    <pre>
+      Xin chào
+      Tôi đang học code
+    </pre>
+
+    <div>Xin chào Tôi đang học code</div>
+
+    <pre>
+      <h1>Xin chào, nội dung này vẫn được biên dịch qua thẻ &copy; </h1>
+      <h2>Xin chào, nội dung này vẫn được &#160;&#160;&#160;biên dịch qua thẻ &copy; </h2>
+    </pre>
+  </body>
+</html>

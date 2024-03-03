@@ -1,0 +1,56 @@
+/* Attribute selector */
+
+/* thẻ a có thuộc tính target thì lệnh css mới có tác dụng */
+ul li a[target]
+{
+    color: red;
+}
+
+/* Chọn thẻ a có link bằng fullstack */
+
+ul li a[href="https://fullstack.edu.vn"]{
+    color:green;
+}
+
+
+/* Chọn thẻ có thuộc tính bằng value , có giá trị bắt đầu là value, vd bên dưới có cùng giá trị link fullstack*/
+
+ul li a[href^="https://fullstack.edu.vn"]{
+    color:yellow;
+}
+
+
+/* Tất cả link có chứa dữ liệu fullstack.edu.vn thì được css */
+ul li a[href*="fullstack.edu.vn"] {
+
+    color: red;
+}
+
+
+/* Css phần tử tên miền có đuôi . net */
+
+ul li a[href$=".net"]{
+    color: blueviolet;
+}
+
+/* css tất cả các thuộc tính col- */
+
+.row [class^="col-"]{
+    color: red;
+}
+
+
+/* Nếu ko có * sau box thì Css thuộc tính cho tất cả phần tử cha, con phần tử còn trong thẻ box sẽ nhận tùy giá trị
+.box  {
+    color: blue;
+    background-color: red;
+} */
+
+
+
+/* Css thuộc tính cho tất cả phần tử con trong thẻ box */
+.box * {
+    color: white;
+    background-color: red;
+}
+

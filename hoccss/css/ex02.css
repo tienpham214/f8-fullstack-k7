@@ -1,0 +1,63 @@
+
+/* selcetor cùng cấp, cùng trong 1 thẻ html
+selector1selector2
+=> lưu ý ko cần quan tâm tới thú tự, trừ trường hợp sử dụng tagname phải ở đầu */
+
+/* a.link#link => chọn thẻ a có class là link, id là link
+ trong tình huống ko đc phép sửa html, thì phải kết hợp nhiều selector, khai báo nội dung chi tiết, đẩy độ ưu tiên lên cao hơn
+*/
+
+
+
+h1.title{
+    color: red;
+}
+
+h2.title{
+    color: blue;
+}
+
+
+
+/* selector nằm sau dấu ngã, cùng cấp nhau
+ dấu ~ là lựa chọn các đối tượng đứng sau  
+
+*/
+
+ ul ~ p {
+    color: red;
+ }
+
+ ul ~ div p {
+    color: blue;
+ }
+
+ /* lệnh css khi nút được check sẽ gạch ngang nội dung check */
+ .todos input:checked ~ span{
+    text-decoration: line-through;
+ }
+
+  /* dấu cộng là css phần tử cùng cấp nằm ngay sau nó */
+ p + h2 {
+    color: brown;
+ }
+
+ /* css cho phần từ nằm sau thẻ h2, một thẻ h2 tiếp và sau thẻ p *
+ 
+ cho cặp thẻ liền nhau/
+ p+ h2 + h2 {
+    color: rgb(89, 0, 198);
+ }
+
+
+ h2 + h2 
+ 
+ /*gộp selector, nhiều selector sự dụng chung 1 block code
+
+ */
+
+ p + h2,
+ p + h2 + h2{
+    color: green;
+ }
+

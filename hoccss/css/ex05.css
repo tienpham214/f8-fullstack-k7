@@ -1,0 +1,123 @@
+/* Lớp giả, hay còn gọi là State
+- CÚ PHÁP 
+selector:pseudo-class{
+
+}
+*/
+
+/* vd các lớp giả
+
+1. hover, active, focus */
+
+
+/* focus thì chỉ áp dụng đối với thẻ form, còn đối với thẻ khác thì ko có */
+/* .btn:focus{
+    background: blue;
+}
+
+
+/* Áp dụng được với tất cả các thẻ HTML */
+.btn:hover{
+    background:green;
+}
+
+
+.btn:active{
+    background: red;
+} */
+
+/* Hoạt động active thì cần có tác động chuột máy tính thì mới có tác dụng
+
+focus là có outline là màu đen khi kích chuột vào*/
+
+/* Trường hợp ngoại lệ để 1 thẻ html ko phải form có focus  --> thêm thuộc tính tabindex */
+
+input:focus::placeholder{
+    color:red;
+}
+
+input:active::placeholder{
+    font-style: italic;
+}
+
+h1:focus{
+    color: red;
+}
+
+
+/* 2. not -- là loại trừ, phủ định */
+
+/* sẽ loại trừ itemm3,5 để css  */
+/* .product .item:not(.active, .inactive){
+    color: red;
+} */
+
+/* 3.  Trạng thái disable */
+
+.btn{
+    background: green;
+    border: 0;
+}
+
+/* .btn[disabled]{
+    color: white;
+} */
+
+.btn:disabled{
+    color:white
+}
+
+
+/* 4. Trạng thái :checked */
+
+/* Thay đổi trạng thái của thuộc tính nào đã checkbox */
+input[type="checkbox"]:checked ~ span {
+    text-decoration: line-through;
+}
+
+/* Thiết lập cho trạng thái checked và disable được đổi trạng thái */
+input[type="checkbox"]:checked:disabled ~ span{
+    color: rgb(99, 22, 22);
+}
+
+
+/* Tùy biến sản phẩm con đầu tiên */
+
+/* .product h2:first-child{
+    color:rgb(47, 0, 255)
+}
+
+.product h2:last-child{
+    color: greenyellow;
+} */
+
+
+/* Tùy biến thêm tình huống nữa có of-type  khi mà có một thẻ span ở trên phá ngang thì dùng thuộc tính of-type để tùy biến */
+
+/* .product h2:first-of-type{
+    color:rgb(47, 0, 255)
+}
+
+.product h2:last-of-type{
+    color: greenyellow;
+} */
+
+
+/* Thiết lập chỉ định thuộc tính nào bắt buộc được thiết lập, vd sản phẩm số 5 */
+.product h2:nth-child(5){
+    color: blue;
+}
+
+
+
+/* Thiết lập chỉ định thuộc tính nào bắt buộc được thiết lập, vd sản phẩm số có giá trị là 2n+1, n được tính từ 0 */
+.product h2:nth-child(2n+ 1){
+    color: blue;
+}
+
+
+/* nẾU CÓ TRƯỜNG HỢP XEN NGANG lại dùng thẻ :nth-of-type() */
+
+.product h2:nth-of-type(2n+2){
+    color: blue;
+}

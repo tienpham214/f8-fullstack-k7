@@ -1,0 +1,72 @@
+/* giá trị kế thừa
+- inital => kế thừa giá trị mặc định của trình duyệt
+- inherit => kế thừa từ thành phần .chart
+
+CÁC ĐƠN VỊ HAY DÙNG:
+
+1. ĐƠN VỊ TUYỆT ĐỐI 
+- px (pixel)
+- pt(point) =1.3 x px
+
+2. đơn vị tương đối
+- em: tỷ lệ với thành phần cha 
+- rem: tỷ lệ với mặc định trình duyệt
+- % : tỷ lệ với thành phần cha
+- vw (viewport width) : tỷ lệ với chiều rộng khung nhìn 
+- vh (viewport hight): tỷ lệ với chiều cao khung nhìn */
+
+/* thuộc tính color: thay đổi màu văn bản 
+/* cú pháp color: value
+Tên màu tiếng anh
+mã màu hexa
+mã màu rgb
+mã màu hsl */
+
+.content .title{
+    color: #ff0000c0;
+}
+
+/* Thiết lập màu khi hover thì về màu của cha  */
+.content .title:hover{
+    color: inherit;
+}
+
+
+
+/* GIẢM ĐỘ MÀU THÌ DÙNG opacity */
+.content .sub-title{
+    color: #ff0000;
+    opacity: 0.5;
+}
+
+/* Khi hover về thì màu về mặc định của trình duyệt */
+.content .sub-title:hover{
+    color: initial;
+}
+
+
+
+/* thuộc tính transparent */
+
+/* GIẢM ĐỘ MÀU THÌ DÙNG opacity */
+/* .sub-title{
+    color: transparent;
+    
+} */
+
+
+/* Color là thuộc tính kế thừa. thuộc tính cha thay đổi thì con cũng thay đổi  */
+
+.content{
+    color: blue;
+}
+
+/* Lấy giá trị màu trong cùng selector, vd color màu khác thì boder cũng lấy theo giá trị màu đó là ta dùng currentcolor*/
+.content .title{
+    color: rgb(117, 0, 128);
+    border: 1px solid currentColor;
+}
+
+.content .title:hover{
+    color: yellow;
+}

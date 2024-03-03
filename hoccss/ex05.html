@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pseudo class</title>
+    <link rel="stylesheet" href="css/ex05.css" />
+  </head>
+  <body>
+    <!-- Lớp giả -->
+
+    <h1 tabindex="1">Pseudo Class</h1>
+
+    <!-- form -->
+    <div>
+      <input type="text" placeholder="Họ tên" tabindex="2" />
+      <input type="email" placeholder="email" tabindex="4" />
+      <input type="text" placeholder="Số điện thoại" tabindex="3" />
+      <button class="btn" tabindex="5">Click me</button>
+    </div>
+
+    <!-- thuộc tính tabindex là để đặt thứ tự tab, khi ấn tab trên máy tính -->
+
+    <div class="product">
+      <h2 class="item">Sản phẩm 1</h2>
+      <h2 class="item">Sản phẩm 2</h2>
+      <h2 class="item-active">Sản phẩm 3</h2>
+      <h2 class="item">Sản phẩm 4</h2>
+      <h2 class="item inactive">Sản phẩm 5</h2>
+    </div>
+
+    <button class="btn" disabled>Click me</button>
+
+    <!-- THẺ CHECKED -->
+
+    <div>
+      <input type="checkbox" name="" id="" /><span>Item 1</span>
+      <input type="checkbox" name="" id="" checked /><span>Item 2</span>
+      <input type="checkbox" name="" id="" checked disabled /><span
+        >Item 3</span
+      >
+    </div>
+
+    <div class="product">
+      <span>Hello F8</span>
+      <h2 class="item">Sản phẩm 1</h2>
+      <h2 class="item">Sản phẩm 2</h2>
+
+      <div>
+        <h2 class="item-active">Sản phẩm 3</h2>
+        <h2 class="item">Sản phẩm 4</h2>
+        <h2 class="item inactive">Sản phẩm 5</h2>
+      </div>
+      <div>
+        <h2 class="item inactive">Sản phẩm 6</h2>
+        <h2 class="item inactive">Sản phẩm 7</h2>
+        <h2 class="item inactive">Sản phẩm 8</h2>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Các thẻ trong inline</title>
+  </head>
+  <body>
+    <!-- Thẻ liên kết là thẻ a, thuộc tính title, target
+   - thuộc tính mở tab hiện tại: self, parent, top, hoặc để trống
+    - còn khi mở tab mới là blank, hoặc ký tự bất kỳ
+    -->
+    <a title="Website" href="https://tienpv.com" target="_blank">
+      Website của tôi
+    </a>
+    <br />
+
+    <a title="Website" href="//tienpv.com" target="_blank"> Website của tôi </a>
+
+    <!-- Đường dẫn 2 cấp, 2 folder ../../duong-dan -->
+
+    Nếu đặt link có #id mà đúng bằng id thì nó sẽ nhảy tới nội dung chứa id đó
+    Nếu đặt # trống ko thì nó nhảy lên đầu
+    <div>
+      <a href="#home">Home</a>
+      <a href="#new">News</a>
+      <a href="#about">About</a>
+      <a href="#products">Products</a>
+      <a href="#contacts">Contacts</a>
+    </div>
+    <div id="home">
+      <h2>Home</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto
+        explicabo repellendus eligendi blanditiis adipisci sapiente, veritatis
+        libero voluptatem ipsum minus atque, laudantium nesciunt a quidem
+        accusamus harum qui ipsa?
+      </p>
+    </div>
+
+    <div id="new">
+      <h2>News</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto
+        explicabo repellendus eligendi blanditiis adipisci sapiente, veritatis
+        libero voluptatem ipsum minus atque, laudantium nesciunt a quidem
+        accusamus harum qui ipsa?
+      </p>
+    </div>
+
+    <div id="about">
+      <h2>About</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto
+        explicabo repellendus eligendi blanditiis adipisci sapiente, veritatis
+        libero voluptatem ipsum minus atque, laudantium nesciunt a quidem
+        accusamus harum qui ipsa?
+      </p>
+    </div>
+
+    <div id="products">
+      <h2>Products</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto
+        explicabo repellendus eligendi blanditiis adipisci sapiente, veritatis
+        libero voluptatem ipsum minus atque, laudantium nesciunt a quidem
+        accusamus harum qui ipsa?
+      </p>
+    </div>
+
+    <div id="contacts">
+      <h2>Contacts</h2>
+      <p>
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit iusto
+        explicabo repellendus eligendi blanditiis adipisci sapiente, veritatis
+        libero voluptatem ipsum minus atque, laudantium nesciunt a quidem
+        accusamus harum qui ipsa?
+      </p>
+    </div>
+
+    <a href="#">Nhảy lên đầu trang</a>
+    <a href="#!">Ko nhảy đi đâu, đứng im</a>
+    <a href="#abc">Ko nhảy đi đâu, đứng im</a>
+
+    <!--    nếu ko có id nào tồn tại thì nó ko trả kết quả -->
+  </body>
+</html>
