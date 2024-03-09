@@ -37,7 +37,7 @@ body {
 }
 .content::after {
   position: relative;
-  font-family: "FontAwesome";
+  font-family: "FontAwesome"; /* This is the correct font-family*/
   content: "\f061";
   color: #ff574d;
   width: 50px;
