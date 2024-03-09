@@ -13,7 +13,7 @@ html {
 }
 
 body {
-  background-image: url("http://uiwebsoft.com/justlog/login-one/images/login-bg2.jpg")
+  background-image: url(../imgbai3/loginbg2.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: right bottom;
