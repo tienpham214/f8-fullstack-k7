@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  box-sizing: border-box;
+}
+
+.header{
+  background-color: rgba(0, 0, 0, 0.3);
+   width: 100vw; 
+   height: 45vh;
+}
+.vingroup {
+  width: 100vw;
+  height: 45vh;
+  background-image: url(../imgbai2/Landmark81banner.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 100% 50%;
+}
+
+ 
+.year, .count{
+  font-weight: 600;
+  font-size: 23px;
+}
+
+  .about {
+  width: fit-content;
+  display: flex;
+  position: relative;
+  left: 5%;
+  top: 65%;
+}  
+
+
+
+/* CSS MENU  */
+.menu {
+  float: right;
+  text-transform: uppercase;
+}
+.menu > ul > li {
+  display: inline-block;
+  font-weight: 500;
+  padding: 15px;
+}
+.menu > ul > li > label {
+  display: inline-block;
+  padding-bottom: 10px;
+}
+.tab:hover ~ label {
+  color: #ff0400;
+  border-bottom: 3px solid #ff0400;
+}
+.tab:checked ~ label {
+  color: #ff0400;
+  border-bottom: 3px solid #ff0400;
+}
+
+
+.logo {
+  background-color: white;
+    width: 263px;
+    height: 170px;
+    align-items: center;
+    display: inline-flex;
+    margin-top: 265px;
+    margin-left: 91px;
+}
+.logo > img {
+  width: 206px;
+  margin-left: 25px;
+  margin-top: 36px;
+} 
+
+.info {
+  padding-left: 15px;
+  color: white;
+  text-transform: uppercase;
+  margin-left: 61px;
+  margin-top: 49px;
+}
+.info > .info1{
+  display: inline-block;
+  padding-top: 19px;
+  padding-left: 4px;
+}
+
+
+.info > .info2{
+  display: inline-block;
+  padding-top: 19px;
+  padding-left: 42px;
+}
+h2.title {
+  width: 516px;
+  margin-top: -52px;
+}
+

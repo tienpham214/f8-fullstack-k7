@@ -1,0 +1,67 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  border: 0;
+}
+
+@font-face {
+  font-family: SFU;
+  src: url(../font/SFUTradeGothic-BoldCondensedTwenty.woff2);
+}
+
+
+body{
+   background-image:url(../imgbai1/bg.jpg);
+   height: 500px;
+   background-repeat: no-repeat;
+   background-size: contain;
+   background-position: top center;
+   
+}
+
+.info{
+  width: 642px;
+  background: #f0f8ff9e;
+  margin-top: 130px;
+  margin-left: 420px;
+  border-radius: 21px;
+  padding: 30px;
+  line-height: 32px;
+   
+}
+ .title{
+  font-family: "Asap";
+  color: #bf4240
+ }
+
+ .info-detail{
+  font-family: "Asap";
+  color: #3f3424
+ }
+
+ .info::after {
+  content: "3,2 TỶ/CĂN";
+  background-color: #bf4240;
+  position: relative;
+  display: block;
+  width: 162px;
+  height: 62px;
+  text-align: center;
+  line-height: 61px;
+  color: white;
+  font-family: SFU;
+  border-radius: 5px;
+  top: 49px;
+  left: 410px;
+  font-size: 22px;
+  font-weight: 600;
+}
+
+
+.location{
+  font-family: "Asap";
+  display: inline-block;
+  padding: 10px 0px 5px 0px;
+  color: #3f3424
+}
