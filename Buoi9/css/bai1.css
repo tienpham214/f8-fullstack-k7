@@ -132,14 +132,15 @@ p{
 .background-color::after{
   content: "";
   display: inline-block;
-  width: 300px;
-  height: 403px;
+  width: 307px;
+  height: 405px;
   border: 1px solid #c32c2c;
   position: absolute;
   top: -9px;
   z-index: 1;
   /* background-image: url(https://picsum.photos/200); */
   z-index: 1;
+  left: -8px;
 }
 
  .title{
