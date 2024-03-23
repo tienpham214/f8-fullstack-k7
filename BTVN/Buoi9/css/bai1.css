@@ -1,0 +1,167 @@
+h2{
+  font-family: Space Grotes;
+}
+
+p{
+  font-family: Inter;
+}
+
+ 
+.main{
+  display: flex;
+  flex-direction: column;
+  width: 600px;
+ float: left;
+}
+
+.box-content{
+  margin: 0px 50px 0px;
+  height: 240px;
+  position: relative;
+  display: flex;
+  width: 567px;
+}
+
+
+.box-content::before {
+  content: "";
+  display: inline-block;
+  height: 175px;
+  border: 1px solid #ddd;
+  position: absolute;
+  top: 45px;
+  left: calc(50% + 32px);
+}
+
+.box-content::after {
+  content: "";
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  border-radius: 50%;
+  background: linear-gradient(360deg, #3d877b, #57bcab);
+  box-shadow: #57bcab41 0 0 0px 8px;
+  position: absolute;
+  right: calc(50% - 40px);
+  top: 15px;
+}
+
+
+.box-content:hover > .event {
+  text-align: left;
+  transform: translateX(350px);
+}
+.box-content:hover > .year {
+  transform: translateX(-152px);
+}
+.box-content:hover a {
+  background-color: #a26f5a;
+  color: white;
+}
+
+
+
+
+
+/* event  */
+.event {
+  width: 293px;
+  text-align: right;
+  padding-right: 64px;
+  line-height: 2;
+  transition: transform 0.5s ease-in-out;
+  margin-top: -21px;
+}
+
+
+.event p {
+  font-size: 0.9em;
+}
+.event a {
+  display: inline-block;
+  background-color: #ddd;
+  width: 120px;
+  text-align: center;
+  height: 30px;
+  line-height: 30px;
+  border-radius: 99px;
+  margin-top: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+
+/* css image right  */ 
+.col-right {
+  float: left;
+}
+
+ 
+
+.background-image{
+  position: relative;
+  width: 300px;
+  height: 400px;
+   
+  
+}
+
+.background-color {
+  position: absolute;
+  width: 98%;
+  height: 97%;
+  background-color: #455eb2;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+ 
+} 
+
+/* .background-color::before{
+  content: "";
+  display: inline-block;
+  width: 300px;
+  height: 403px;
+  border: 1px solid #c32c2c;
+  position: absolute;
+  top: -9px;
+  z-index: 1;
+  background-image: url(https://picsum.photos/200);
+} */
+
+.background-color::after{
+  content: "";
+  display: inline-block;
+  width: 307px;
+  height: 405px;
+  border: 1px solid #c32c2c;
+  position: absolute;
+  top: -9px;
+  z-index: 1;
+  /* background-image: url(https://picsum.photos/200); */
+  z-index: 1;
+  left: -8px;
+}
+
+ .title{
+  background-image: url(https://picsum.photos/200);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #6d262600;
+  font-size: 61px;
+  font-weight: 700;
+  position: absolute;
+  bottom: 1px;
+  right: 23px;
+  z-index: 2;
+}
+
+.subtitle{
+  font-family: Inter;
+  position: absolute;
+  font-size: small;
+  color: white;
+  top: 21rem;
+  left: 11rem;
+  z-index: 2;
+  text-transform: capitalize;
+}

@@ -1,0 +1,22 @@
+
+/* .box{
+    width: 100px;
+    height: 100px;
+    border-width: 50px;
+    border-style: solid;
+    border-color: red green blueviolet yellowgreen;
+} */
+
+
+/* biến hình vuông thành tam giác  */
+
+.box{
+    width: 0px;
+    height: 0px;
+    border-width: 50px;
+    border-style: solid;
+    border-color: transparent transparent blueviolet transparent;
+}
+
+
+/* shape css  học thêm để luyện CSS*/

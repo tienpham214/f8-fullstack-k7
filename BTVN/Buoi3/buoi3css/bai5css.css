@@ -1,0 +1,43 @@
+.wrapper {
+    background: white;
+    margin: 0 auto;
+    text-align: center;
+    padding: 30px;
+    border: 1px solid #aba4a4;
+    width: 945px;
+}
+
+.logo{
+    margin: 0 auto;
+    width: 190px;
+    height: 50px;
+    background: blueviolet;
+    color: white;
+    text-align: center;
+    font-size: 35px;
+    line-height: 50px;
+}
+
+h1 {
+    font-weight: normal;
+    font-family: fantasy;
+    font-size: 42px;
+}
+
+h1 strong {
+    color: blue;
+    
+}
+
+.vb {
+    font-size: 20px;
+}
+
+
+button {
+    background: black;
+    color: white;
+    height: 48px;
+    font-size: 18px;
+    width: 201px;
+}

@@ -1,0 +1,54 @@
+/* Margin collapsing 
+2 phần tử cạnh nhau
+
+Trường hợp 1: 2 giá trị dương thì lấy giá trị lớn hơn
+Trường hợp 2: 1 giá trị âm, 1 giá trị dương thì 2 giá trị được cộng vào nhau
+Trường hợp 3: 2 giá trị âm thì lại lấy giá trị nhỏ hơn
+
+Như vậy nếu margin mà cùng giá trị thì lấy giá trị trị tuyệt đối của giá trị lớn hơn 
+
+Trường hợp mà margin phần tử con, mà ko đẩy phần tử cha, bị thu hẹp lề 
+- border
+- display: inline-block; flex; inline-flex
+bố sung thêm width
+- position:absolute, fixed
+- float: left, right; 
+*/
+
+/* h2{
+    border: 1px solid red;
+    margin:0
+} */
+
+/* .title-1{
+margin-bottom: 10px;
+
+}
+
+
+.title-2{
+margin-top: 10px;
+
+} */
+
+
+/* inline là theo chiều ngang, block là theo chiều dọc  */
+
+.box{
+    background: green;
+    color: white;
+    /* border: 1px solid red; */
+    /* clear: both; */
+    /* position: absolute; */
+   /* float: left;
+    width: 100%; */
+width: 300px;
+padding-inline:30px; /* nằm giữa khối từ 30px */
+margin-inline: auto; /* căn giữa khối */
+padding-block:40px; /* khoảng cách khối theo chiều dọc là 40px */
+
+}
+
+.box h2{
+    margin: 50px 0;
+}

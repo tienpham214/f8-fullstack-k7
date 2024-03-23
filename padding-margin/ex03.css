@@ -1,0 +1,22 @@
+
+/* Thuộc tính căn nội dung
+- box-sizing: content-box  (cho nội dung theo content, vượt qua box)
+- box-sizing:border-box     (cho nội dung nằm trong box, nằm trong box)
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.box{
+    width: 300px;
+    margin: 30px auto;
+    border: 1px solid red;
+    height: 200px;
+    padding: 10px;
+    /* box-sizing: content-box; */
+    box-sizing: border-box; /* căn đều content theo box */
+    padding: 50px;
+}

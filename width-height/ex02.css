@@ -1,0 +1,25 @@
+/* min-width --------- width ----- max-width
+max-width: fit-content(20em)
+
+*/
+
+/* Kích thước sẽ lấy kích thước tối đa nếu có max, nhỏ nhất là min, nếu ko có nếu dùng min, max, vd dưới chiều rộng sẽ là 400px, còn cao là 200px, vì ko có max height */
+.content{
+    width: 800px;
+    height: 200px;
+    max-width: 400px;  /*chặn ko cho width ko lớn hơn nó*/
+    min-width: 100px;/*chặn ko cho width nhỏ hơn nó*/
+    background: green;
+    min-height: 50px;
+}
+
+.image{
+    display: inline-block;
+    width: 30%;
+    border: 1px solid red;
+}
+
+.image img{ 
+       max-width: 100%;
+       display: block;
+}

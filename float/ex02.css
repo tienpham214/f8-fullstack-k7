@@ -1,0 +1,134 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background: aqua;
+}
+
+.box{
+    width: 1300px;
+    /* border: 1px solid red; */
+    margin: 30px auto;
+}
+
+.box ul{
+    list-style-position: inside;
+    list-style-type: none;
+    /* list-style: inside upper-roman;  Viết kết hợp CSS*/
+}
+
+.box-menu{
+    
+   margin: 30px auto;
+    text-align: left;
+    font-size: 0;
+    width: 80%;
+    border-radius: 5px;
+    
+}
+
+/* list-style-position: inside  ; là liểu nằm trong danh sách
+list-style-position: outside
+list-style-type: kiểu danh sách
+- none: ko ở định dạng danh sách
+- disc: mặc định của ul
+- circle: kiểu trò
+- square: kiểu hình vuông
+
+---kIỂU DẠNG SỐ ---
+list-style-type: 
+- decimal : dạng số
+- decimal-leading-zero; kiểu có thêm số 0 ở trước
+- lower-alpha
+- upper-alpha
+- lower-roman
+- upper-roman
+- 
+
+- list-style-image: thay thế bằng ảnh, ko khuyến khích
+mà nên thay thế bằng background (background-size), kết hợp với ::before
+
+
+----------
+
+/* Đặt font-size cho thẻ ul bằng 0px, và cho thẻ li giá trị font-size: initial thì loại bỏ được khoảng trống của thẻ inline-block */
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+  }
+  
+  ul {
+    list-style: none;
+  }
+  
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  
+  body {
+    background: #2c3e50;
+    color: #fff;
+  }
+  
+  .menu {
+    width: 80%;
+    margin: 30px auto;
+    background: #34495e;
+    font-size: 0;
+    border-radius: 5px;
+  }
+  .menu ul li {
+    display: inline-block;
+  }
+  .menu ul li a {
+    display: block;
+    padding: 10px 20px;
+    font-size: initial;
+  }
+  .menu ul li a:hover {
+    background: #1abc9c;
+    border-radius: 5px;
+  }
+
+.menu ul li{
+    display: inline-block;
+}
+
+
+.menu ul li a{
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: initial;
+}
+
+.menu ul li a:hover{
+    background-color: greenyellow;
+    border-radius: 5px;
+}
+
+
+.menu ul li a{
+    display: block;
+    padding: 10px 20px;
+    font-size: initial;
+}
+
+.menu ul li a:hover{
+   background: green;
+   border-radius: 5px;
+}
+
+.menu > ul ul{
+    display: none;
+    position: absolute;
+    background: yellowgreen;
+    min-width: 300px;
+}
+
+.menu > ul ul li:hover ul{
+    display: block;
+}

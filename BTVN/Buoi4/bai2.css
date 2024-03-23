@@ -1,0 +1,84 @@
+/* Form đặt bàn là 1 thành phần trên các web về ăn uống, đây là 1 section trong trang chủ
+
+Học viên code thành 1 form giống như thế này
+
+Gợi ý font chữ:
+
+Tiêu đề lớn: Alfa Slab One
+Tiêu đề nhỏ: Bebas Neue
+Input: Bebas Neue
+Button: Alfa Slab One */
+
+.form-table{
+    margin: 0 auto;
+    width: 1000px;
+    text-align: center;
+    border: 1px solid;
+    padding: 5px 15px 40px 15px;
+
+}
+.reservation{
+    font-family: 'Bebas Neue';
+    font-weight: normal;
+    color: #3a2617;
+    margin-bottom: -27px;
+}
+
+.book-table-list{
+    font-family: 'Alfa Slab One';
+    color: #3a2617;
+    font-size: 40px;
+    margin-bottom: 5px;
+}
+
+
+
+input[type="text"]{
+    font-family: 'Bebas Neue';
+    color: #3a2617;
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+input[type="text"]::placeholder{
+    font-family: 'Bebas Neue';
+    color: #3a2617;
+    padding: 5px;
+    font-size: 20px;
+}
+
+
+input[type="email"]{
+    font-family: 'Bebas Neue';
+    color: #3a2617;
+    height: 50px;
+    width: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+
+input[type="email"]::placeholder{
+    font-family: 'Bebas Neue';
+    color: #3a2617;
+    padding: 5px;
+    font-size: 20px;
+}
+
+
+
+.btn{
+    font-family: 'Alfa Slab One';
+    font-size: 17px;
+    color: white;
+    background-color: brown;
+    height: 57px;
+    width: 310px;
+    border-radius: 5px;
+    border: none;
+    margin-top: 20px;
+    margin-left: 20px;
+}

@@ -1,0 +1,54 @@
+/* 
+Tìm hiểu ý nghĩa transtation: nhóm các thuộc tính để thiết lập thời gian chuyển động của các thuộc tính css
+
+- transition-property : none | all | tên thuộc tính
+- transition-duration: value + unit(s, ms)
+
+thuộc tính transition chỉ tác dụng với các thuộc tính có giá trị số
+
+--
+transition-delay: value + unit (s, ms)
+transition-timing-function : quy định tốc độ chuyển động qua mỗi chuyển động
++ ease --> chạy chậm - nhanh - chậm
++ linear --> tốc độ đều
++ ease-in --> chậm - nhanh 
++ ease-out --> nhanh - chậm
++ ease-in-out --> chậm - nhanh - chậm
++ cubic-bezier(p1,p2,p3,p4): tự thiết lập được tốc độ theo quãng đường
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box{
+    padding: 20px;
+    border: 1px solid red;
+    margin-top: 30px;
+    transition-property: padding-left; /* padding-top; */
+    transition-duration: 1s;
+ 
+}
+
+
+.box h2{
+    transition-property: visibility, opacity, display;
+    transition-duration: 2s;
+    /* transition-delay: 1s; */
+    /* transition-timing-function: ease; */
+    /* transition-timing-function: ease-in-out; */
+    transition-timing-function: cubic-bezier(.28,1.03,1,-0.05)
+    
+}
+
+.box:hover h2{
+    visibility: hidden;
+    opacity: 1;
+}
+
+.box:hover{
+    padding-left: 100px;
+    padding-top: 100px;
+    
+}

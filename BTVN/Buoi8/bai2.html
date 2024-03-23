@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 2: Shopping cart</title>
+    <link rel="stylesheet" href="../Buoi8/css/bai2.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="images"></div>
+      <div class="frame">
+        <div class="header">
+          <h2>Cart</h2>
+          <div class="close-icon">
+            <i class="fa-solid fa-circle-xmark"></i>
+          </div>
+        </div>
+        <div class="products">
+          <ul class="list">
+            <li class="item">
+              <div class="product-image">
+                <img src="" alt="" />
+              </div>
+              <div class="product-details">
+                <a href="#!">iphone 14 pro max 128GB</a>
+                <div class="quantity-and-price">
+                  <button class="quantity-btn minus">-</button>
+                  <div class="quantity">1</div>
+                  <button class="quantity-btn plus">+</button>
+                  <div class="price">1x $570</div>
+                </div>
+              </div>
+              <div class="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </li>
+            <li class="item">
+              <div class="product-image">
+                <img src="" alt="" />
+              </div>
+              <div class="product-details">
+                <a href="#!">iphone 15 pro max 256GB</a>
+                <div class="quantity-and-price">
+                  <button class="quantity-btn minus">-</button>
+                  <div class="quantity">1</div>
+                  <button class="quantity-btn plus">+</button>
+                  <div class="price">1x $670</div>
+                </div>
+              </div>
+              <div class="close-icon">
+                <i class="fa-solid fa-xmark"></i>
+              </div>
+            </li>
+          </ul>
+          <div class="billing">
+            <div class="subtotal">
+              <h2>Subtotal</h2>
+              <span>$1,240</span>
+            </div>
+            <p>Taxes and shipping calculated at checkout</p>
+            <button class="view-cart">View Cart</button>
+            <button class="add-to-cart">Add to Cart</button>
+            <div class="shipping-info">
+              <div class="truck"><i class="fa-solid fa-truck-fast"></i></div>
+              <span>Spend $499.00 for free shipping</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

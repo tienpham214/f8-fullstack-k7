@@ -1,0 +1,135 @@
+/* Flex là kỹ thuật chia layout một cách linh hoạt 
+- Trục main và cross
+- THÀNH PHẦN: flex container và flex item
+
+- tHUỘC TÍNH KÍCH HOẠT FLEX : display: flex;
+- flex-direction: chọn hướng cho trục chính
++ row: mặc định
++ column: 
++ row-reverse
++ column-reverse
+
+------------------------------------------------------------------------
+- justify-content: căn chỉnh các item theo hướng song song với trục chính 
++ flex-start
++ flex-end
++ center
+
++ space-between;
++ space-arround;
++ space-evenly
+
++ start : Tìm hiểu ý nghĩa 
++ end : 
+
+-------------------
+- align-items: căn chỉnh các item theo hướng vuông góc với trục chính, các giá trị sau:
++ stretch
++ flex-start
++ center
++ flex-end
++ baseline 
+*/
+
+
+ /*
+ - align-content: căn chỉnh hàng trong trường hợp flex-direction là row, căn chỉnh cột nếu flex-direction là column, áp dụng khi từ có 2 hàng(cột))
+ - flew-wrap
+ - gap: tạo khoảng cách giữa các item
+ + column-gap
+ + row-gap
+-------------------
+
+2. Các thuộc tính trong flex-item
+
+flex-grow: lấp đầy khoảng cách còn thừa của container, mặc định giá trị bằng 0
+flex-shrink: 1, co khoảng cách, số càng to thì co càng nhiều
+flex-basis: bị chặn bởi min-width, max-width khi flex-direction là row; 
+bị chặn bởi min-height , max-height khi flex-direction là column; 
+
+cách viết tổng hợp
+
+flex: grow shrink basis 
+vd: flex : 0 1 75px;
+
+
+
+---------------
+Thuộc tính align-self: căn chỉnh 1 item theo trục cross; các giá trị giống align-item
+
+
++*/
+
+
+
+ *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+ }
+
+/* .box{
+    width: 400px;
+    height: 300px;
+    border: 1px solid red;
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    flex-wrap: wrap;
+    /* align-content: center; */
+    /* gap: 10px 20px; khoảng cách giữa các hàng, giữa các cột */
+    
+  */
+
+/* .item{
+    background: green;
+    color: white;
+    padding: 10px;
+    border: 1px solid #fff;
+    /* flex-shrink: 5;
+     flex-grow: 1; */
+     flex-basis: 75px;
+     /* min-width: 70px; */
+     max-width: 80px;
+ */
+
+
+
+/* .item:nth-child(4){
+    align-self: center;
+}
+
+/* cho item căn ra giữa 
+.item:nth-child(2){
+   display: flex;
+   justify-content: center;
+   align-items: center;
+    
+} */
+
+.partners{
+    padding: 30px 0;
+}
+.partners .partners-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 50px;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+            
+}
+
+
+.partners .partners-inner img {
+   max-height: 55px;
+   width: auto;
+            
+}
+
+
+ 

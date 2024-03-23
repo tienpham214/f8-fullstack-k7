@@ -1,0 +1,155 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: #717171;
+}
+html {
+  font-family: nunito;
+}
+
+body {
+  background-image: url(../imgbai3/loginbg2.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: right bottom;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper {
+  width: 900px;
+  height: 550px;
+  display: flex;
+}
+.content {
+  background: #ff574d;
+  width: 400px;
+  text-align: center;
+  padding-top: 100px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.content::after {
+  position: relative;
+  font-family: "FontAwesome"; /* This is the correct font-family*/
+  content: "\f061";
+  color: #ff574d;
+  width: 50px;
+  height: 50px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 375px;
+  margin-top: -145px;
+  border-radius: 50%;
+  box-shadow: #717171 0px 0px 20px;
+}
+.heading {
+  color: white;
+  font-size: xx-large;
+  margin-left: 50px;
+  font-weight: bold;
+}
+.heading::before {
+  content: "JL";
+  position: absolute;
+  width: 45px;
+  height: 45px;
+  background-color: white;
+  color: #ff574d;
+  font-weight: bold;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 110px;
+  border-radius: 5px;
+}
+.content > p {
+  color: white;
+  margin: 25px 15px 0 15px;
+  line-height: 1.6;
+}
+.content > button {
+  width: 160px;
+  height: 40px;
+  font-size: 15px;
+  color: #ff574d;
+  background-color: white;
+  border: 0;
+  border-radius: 5px;
+  margin: 30px 0 30px 0;
+  cursor: pointer;
+}
+form {
+  background-color: white;
+  width: 500px;
+  text-align: center;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+form > * {
+  display: block;
+  margin: 0 auto;
+}
+.icon {
+  display: flex;
+  justify-content: center;
+}
+.icon > a {
+  display: block;
+  background: #eb5149;
+  width: 35px;
+  height: 35px;
+  margin: 7px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+}
+img {
+  width: 25px;
+}
+form > p {
+  font-size: 1.5em;
+  font-weight: bold;
+  margin-top: 70px;
+  margin-bottom: 45px;
+}
+form > p::before {
+  content: "";
+  position: absolute;
+  width: 50px;
+  border: 1px solid #ff574d;
+  margin-top: 45px;
+  margin-left: 90px;
+}
+form > p > span {
+  color: #ff574d;
+}
+form > input {
+  width: 400px;
+  height: 45px;
+  margin-bottom: 20px;
+  border: 1px solid rgb(178, 178, 178, 0.5);
+  box-shadow: #c9c9c9 0px 0px 2px;
+  outline: none;
+  text-indent: 20px;
+}
+form > button {
+  width: 400px;
+  height: 45px;
+  text-transform: uppercase;
+  color: white;
+  border: 0;
+  background: #ff574d;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}

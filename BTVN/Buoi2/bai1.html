@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="widtd=device-widtd, initial-scale=1.0" />
+    <title>Form đặt hàng</title>
+    <style>
+      .content1 {
+        width: 40%;
+      }
+
+      .row1 {
+        width: 20%;
+        text-align: left;
+      }
+
+      .button {
+        background-color: #097591;
+        color: white;
+        height: 30px;
+      }
+
+      .country {
+        width: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="main">
+      <h1>Try a free sample</h1>
+
+      <p class="content1">
+        Sign up to get a coupon you can redeem at your nearest Dancing Goat cafe
+        for a sample of the Colombia Carlos Imbachi coffee. We'll also make sure
+        you don't miss out on news introducing the new coffees that we add to
+        our store regularly.
+      </p>
+
+      <div>
+        <form action="">
+          <table width="100%" border="0" cellpadding="5" cellsapcing="40">
+            <!-- ROW 1 -->
+            <tr>
+              <td class="row1">
+                <label>First name</label><br />
+                <input type="text" placeholder="John" name="First name" />
+              </td>
+
+              <td>
+                <label>Last name</label><br />
+                <input type="text" placeholder="Smith" name="Last name" />
+              </td>
+            </tr>
+            <!-- ROW 2 -->
+            <tr>
+              <td>
+                <label>Email address</label><br />
+
+                <input
+                  type="email"
+                  placeholder="john@example.com"
+                  name="email"
+                />
+              </td>
+
+              <td>
+                <label>Address</label><br />
+                <input type="text" placeholder="Silk ST" name="Address" />
+              </td>
+            </tr>
+            <!-- ROW 3 -->
+            <tr>
+              <td>
+                <label>City</label><br />
+                <input type="text" placeholder="London" name="City" />
+              </td>
+
+              <td>
+                <label>State</label>(optional)<br />
+
+                <input type="text" placeholder="" name="State" />
+              </td>
+            </tr>
+            <!-- ROW 4 -->
+            <tr>
+              <td>
+                <strong>ZIP code</strong><br />
+
+                <input type="zip_code" placeholder="EC2Y 8DS" name="ZIP code" />
+              </td>
+
+              <td>
+                <strong>Country</strong><br />
+
+                <select name="country" class="country">
+                  <option value="Nuoc_Anh">United Kingdom</option>
+                  <option value="Viet_Nam">Viet Nam</option>
+                  <option value="Nuoc_My">United State</option>
+                </select>
+              </td>
+            </tr>
+            <!-- ROW 5 -->
+            <tr>
+              <td>
+                <input
+                  class="button"
+                  type="sbumit "
+                  value="SEND ME FREE COFFEE"
+                />
+              </td>
+            </tr>
+          </table>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>

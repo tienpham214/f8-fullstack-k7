@@ -1,0 +1,24 @@
+.box{
+    width: 200px;
+    height: 200px;
+    border: 1px solid red;
+    /* overflow: hidden; */
+    overflow: auto;
+    /* overflow: scroll; */
+    overflow-x: hidden ;
+    scrollbar-color: green red;
+}
+
+.box p{
+    width: 400px;
+}
+
+
+/* Thuộc tính overflow
+- hidden: ẩn nội dung bị tràn
+- visible: hiện thị nội dung bị tràn
+- scroll: hiện thị thanh cuộn, ẩn nội dung, lúc nào cũng hiển thị
+- auto: ẩn và hiện thị thanh cuộn, chỉ hiện thị thanh cuộn khi bị tràn 
+- overflow-x 
+- overflow-y
+*/

@@ -1,0 +1,83 @@
+/* Thuộc tinh postion
+Căn chỉnh vị trí các element trong web
+- static: mặc định, ko căn chỉnh gì cả
+- relative: căn chỉnh vị trí tương đói, với vị trí ban đầu
+- absolute: vị trí tuyệt đối
+- fix: vị trí cố định, khi kéo thanh cuộn hay còn gọi là scrolling
+
+Thuộc tính khi sử dụng với positon (trừ static)
+
+- top
+- right
+- bottom
+- left
+- z-index: vị trí theo trục z, trục mắt nhìn thẳng
+- inset: tổng hợp của top, left, right, bottom (viết kết hợp)
+
+
+*/
+*{
+    margin: 0
+    padding:0;
+    
+}
+
+.box{
+    width: 300px;
+    height: 300px;
+    border: 1px solid red;
+    margin: 30px auto;
+    position: relative; /* css thuộc tính này thì đối tượng item mới nhận box là thuộc tính cha, thì item mới theo box, item con thi  position:absolute 
+    hoặc item sẽ bám theo đối tượng absolute nào gần nhất với nó
+    */
+}
+
+.box .item{
+    background: green;
+    color: white;
+    /* margin: 10px; */
+    width: 100px;
+    padding: 10px;
+}
+
+
+
+.item:nth-child(2) {
+    /* position: absolute; */
+    /* bottom: 0;
+    top:0;
+    left: 0;
+    right: 0;
+    width: auto;
+    left: calc(50% - 100px / 2); */
+    background: rgb(110, 0, 110);
+    position: relative;
+    top: 10px;
+    left: 20px;
+    z-index: 1; /* thuộc tính này sẽ cho item 2 nằm trên item 3 (z-index là bằng 0*/
+
+ } 
+
+ .item:nth-child(3){
+    background-color: red;
+    position: relative;
+ }
+
+
+ .overlay{
+    position: absolute;
+   inset: 0;
+   background: rgb(68 20 20 / 85%);
+
+ }
+
+/* 
+ .item:nth-child(2) {
+    position: relative;
+    top: 20px;
+    left: 20px;
+    /* left: calc(100% - 100px - 30px);  đây là dùng công thức toán học để quy đổi đơn vị */
+    background: rgb(110, 0, 110);
+    /* margin-top:20px ;
+    margin-left: 20px;
+} */

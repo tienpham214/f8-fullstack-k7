@@ -1,0 +1,75 @@
+body{
+  background-color: #323641;
+  padding: 0;
+  margin: 0;
+}
+
+.container{
+  
+  height: 400px;
+  width: 350px;
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+}
+
+.envelope{
+  background-color: #d74443;
+  height: 150px;
+  width: 270px;
+  position: relative;
+  left:40px;
+  top:160px;
+}
+.paper{
+  background-color: white;
+  height: 150px;
+  width: 250px;
+  position: relative;
+  left: 10px;
+}
+
+
+.inner1{
+  width: 0;
+  height: 0;
+  border-bottom: 150px solid #e15349;
+  border-right: 270px solid transparent;
+  position: relative;
+  bottom: 150px;
+}
+
+.inner2{
+  width: 0;
+  height: 0;
+  border-bottom: 150px solid #e95e55;
+  border-left: 270px solid transparent;
+  position: relative;
+
+}
+
+.cover{
+  width: 0;
+  height:0;
+  border-top:75px solid #d74443;
+  border-right:135px solid transparent;
+  border-left:135px solid transparent;
+  position: relative;
+  bottom:300px;
+  transform-origin: top;
+}
+
+
+/* effect open mail  */
+
+.envelope:hover .cover{
+  transform: rotateX(180deg);
+  z-index: -1;
+}
+
+.envelope:hover .paper{
+  transform: translateY(-50px)
+}

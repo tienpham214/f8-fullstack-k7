@@ -1,0 +1,37 @@
+/* Thuộc tính gạch chân 
+
+1. text-decoration: none | underline | overline | line-through
+ */
+
+2.  text-transform: none | uppercase | lowercase | capitalize 
+ /* 3.letter- spacing 
+ 4. word-spacing
+
+ 
+ 5. text-indent: thuộc tính này sẽ từ thụt vào đầu dòng đầu tiên, áp dụng nếu cần trình bày đoạn văn
+ 6. Thuộc tính ngắt dòng  word-wrap: break-word; */
+ 
+ /* p{
+    text-decoration: line-through;
+    text-transform: capitalize;
+    letter-spacing: 5px;
+    word-spacing: 5px;
+    text-indent: 10px; 
+    word-wrap: break-word;
+    word-break:break-all;
+ } */
+
+ p {
+    word-wrap: break-word;
+}
+
+ /* Thuộc tính căn giữa, text-align */
+ .content{
+    text-align: center;
+ }
+
+ .img-block{
+    text-align: center;
+    font-size: 0;
+    /* line-height: 0; */
+ }

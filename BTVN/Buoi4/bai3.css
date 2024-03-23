@@ -1,0 +1,110 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .best-seller {
+    text-align: center;
+    width: 100%;
+    height: 46px;
+    position: relative;
+  }
+  h2 {
+    padding: 50px 0 25px 0;
+    font-size: 2em;
+  }
+  html {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  label {
+    background: #ddd;
+    padding: 10px 25px 10px 25px;
+    cursor: pointer;
+    position: relative;
+    line-height: 46px;
+  }
+  #tab-1:checked ~ label[for="tab-1"] {
+    background: darkblue;
+    color: white;
+  }
+  #tab-2:checked ~ label[for="tab-2"] {
+    background: darkblue;
+    color: white;
+  }
+  #tab-3:checked ~ label[for="tab-3"] {
+    background: darkblue;
+    color: white;
+  }
+  #tab-4:checked ~ label[for="tab-4"] {
+    background: darkblue;
+    color: white;
+  }
+  #tab-5:checked ~ label[for="tab-5"] {
+    background: darkblue;
+    color: white;
+  }
+  .products-wrapper {
+    text-align: center;
+    width: 200px;
+    padding-top: 80px;
+    margin: 0 auto;
+  }
+  .products ~ div {
+    padding-top: 70px;
+  }
+  .products-wrapper > div ~ p,
+  span {
+    padding: 15px 0 15px 0;
+  }
+  .products {
+    width: 200px;
+    height: 225px;
+    overflow: hidden;
+  }
+  .action-btn {
+    width: 150px;
+    top: -107px;
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+  button {
+    position: relative;
+    border: 0;
+    background: darkblue;
+    color: white;
+  }
+  .action-btn > button {
+    padding: 16px;
+    display: block;
+  }
+  .products > button {
+    top: -107px;
+    margin-top: 10px;
+    padding: 15px 40px 16px 40px;
+  }
+  .products .photos:hover {
+    background: url("https://picsum.photos/200/300") no-repeat;
+  }
+  #list-product {
+    margin: 0 auto;
+    width: 1000px;
+    display: none;
+  }
+  #tab-1:checked ~ .list-product-1 {
+    display: flex;
+  }
+  #tab-2:checked ~ .list-product-2 {
+    display: flex;
+  }
+  #tab-3:checked ~ .list-product-3 {
+    display: flex;
+  }
+  #tab-4:checked ~ .list-product-4 {
+    display: flex;
+  }
+  #tab-5:checked ~ .list-product-5 {
+    display: flex;
+  }
+

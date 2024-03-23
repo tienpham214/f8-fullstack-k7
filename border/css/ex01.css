@@ -1,0 +1,34 @@
+/* 
+Các thuộc tính của border, tạo đường viền cho thẻ
+Cấu tạo:
+
+- border-width:
+- border-style: solid | dashed | dotted | double
+- border-color: 
+- border-top-width
+- border-left-width
+- border-right-width
+- border-bottom-width
+
+/* / Nếu viết đầy đủ, màu theo cạnh */
+/* border-top-color
+border-right-style
+border-left-style
+border-bottom-style
+
+border-bottom: style width color
+tương tự với color */
+
+
+
+.box{
+    /* border-width: 5px;
+    border-style: solid;
+    border-color: red blue yellow green;  */
+    border: 5px solid red;
+    border-top: 10px solid blue;
+    border-bottom: 20px dashed rgb(0, 205, 116);
+    border-left: 30px dotted rgb(0, 205, 3);
+    border-right: 40px double rgb(255, 123, 0);
+        /* border-width: 5px; */
+}

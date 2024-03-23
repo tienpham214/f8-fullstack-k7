@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bài 1: Form Hey there</title>
+    <link rel="stylesheet" href="css/bai1.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+
+    <!-- Font lobster -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+
+<!-- font lato -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Lobster&display=swap" rel="stylesheet">
+
+
+  </head>
+  <body>
+    <div class="hey-there">
+      <h2 class="title">Hey there</h2>
+      <p>
+        <span class="content1"> We'd like to hear form you.</span><span class="content2"> Send us your message or just say
+            hy with our contact form or directly via phone, we love to chat.</span>
+      </p>
+
+      <!-- fORM -->
+      <form action="">
+      <div class="list-wrapper">
+
+        <!-- Your name  -->
+        <div class="yourname">
+            <i class="fas fa-user"></i><input type="text" placeholder="Your name" onfocus="YourName" />
+            <div class="tooltip"><span>Enter your name</span>
+            </div>
+            <i class="fas fa-star-of-life"></i>
+    </div>
+
+    <!-- YOUR MAIL  -->
+
+       <div class="your-mail">
+        <i class="fas fa-envelope"></i><input type="email" placeholder="your@domain.com" />
+        <div class="tooltip"><span>Enter your mail</span></div>
+        <i class="fas fa-star-of-life"></i>
+    </div> 
+
+
+    <!-- YOUR NUMBER  -->
+        <div class="your-number">
+            <i class="fas fa-mobile"></i><input type="text" placeholder="+44 00 123" />
+            <div class="tooltip"><span>Enter your number</span>
+            </div>
+            <i class="fas fa-star-of-life"></i>
+        </div>
+
+
+        <!-- YOUR SUBJECT  -->
+        <div class="your-subject">
+            <i class="fas fa-folder-open"></i> <select name="Subject" id="Subject" placeholder="Subject">
+            <option value="sub">Subject</option>
+            <option value="sub1">Subject 1</option>
+            <option value="sub2">Subject 2</option>
+            <option value="sub3">Subject 3</option>
+          </select>
+          <div class="tooltip"><span>Choose subject</span></div>
+       </div>
+
+       <!-- YOUR MESSAGE  -->
+
+<div class="your-message">
+    <div class="tooltip"><span>Enter your message</span>
+    </div>
+    <i class="fas fa-comment-alt"></i>
+     <textarea name="message" id="message" cols="43" rows="10" placeholder="Your Message">      
+    </textarea>
+    <span class="mess-star"><i class="fas fa-star-of-life"></i>
+    </span>
+    </div>
+
+    <!-- SEND  -->
+
+    <div class="send-me">
+        <input type="checkbox" checked class="icon-check">
+        <span class="send">Send me a copy of this message</span>
+        <button class="btn">SEND</button>
+    </div>
+    
+</div>
+</form>
+</body>
+</html>

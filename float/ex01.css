@@ -1,0 +1,87 @@
+/* Thuộc tính float, 
+float: left
+float:right
+
+clear:left  // Chống trôi lên bên trái
+clear:right  // chống trôi lên phải
+clear:both  // chống trôi lên hai bên
+
+
+Lưu ý thuộc tính clear chỉ hoạt động với thẻ block ( đối với thẻ span, inline là ko tác dụng)
+
+*/
+
+.box{
+    width: 300px;
+    border: 1px solid red;
+    margin: 30px auto;
+    overflow: auto;
+    padding: 10px;
+   /* overflow: auto; nếu ko dùng thuộc tính này thì dùng <div class="clear"></div> */
+}
+/* hoặc sử dụng thuộc tính bên dưới để khoanh nội dung */
+.box ::after{
+    content: "";
+    clear: both;
+    display: block;
+}
+
+/* .box .item-1{
+    width: 30%;
+    height: 100px;
+    background: green;
+    color: white;
+    float: left;
+}
+
+.box .item-2{
+    width: 30%;
+    height: 50px;
+    background: red;
+    color: white;
+    float: left;
+} */
+
+/* .text{
+    background: black;
+    color: white;
+    width: 30%;
+    clear: left;
+    /* clear: both;
+    clear: right; */
+}
+
+/* .clear {
+    display: block;
+    clear: both;
+} */ */
+
+
+.content{
+    width: 300px;
+    height: 400px;
+    border: 1px solid red;
+    
+}
+
+.box .img1{
+    float: left;
+    margin-right: 12px;
+    margin-bottom: 1px;
+    border-radius: 50%;
+    shape-outside: circle();
+}
+
+
+.btn{
+    /* float: right; */
+    margin-left: auto ;
+    display: block;
+}
+
+ .link{
+    float: right;
+}
+
+
+ 

@@ -1,0 +1,45 @@
+/* 
+THUỘC TÍNH display
+- none: ẩn
+- block: hiện thị dạng block 
+- inline: 
+- inline-block  
+Lưu ý thuộc tính display có rất nhiều giá trị phức tạp
+- flex, inline-flex
+- grid, inline-grid
+- table, inline-table
+- list-item
+- table-cell
+-----------------
+tHUỘC tính opacity: trong suốt 1 thẻ HTML theo tỷ lệ 0 -> 1
+
+
+*/
+
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border:0;
+}
+
+
+.title{
+    border: 1px solid red;
+    /* display: none; */
+    /* display: inline; */
+    display: inline-block;
+    padding: 10px 20px;
+}
+
+
+.title:hover{
+    /* display: none; **THUỘC TÍNH ẨN, NHƯNG MẤT KO GIAN CHIẾM DỤNG */
+    visibility: hidden; Thuộc tính ẩn hiện thành phần trong HTML, NHƯNG GIỮ KO GIAN
+
+    /* /* opacity: 0; * làm trong suốt 1 thẻ */
+}
+
+
+/* Tìm hiểu thuộc tính : float, position  */

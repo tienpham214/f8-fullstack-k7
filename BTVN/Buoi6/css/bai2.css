@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-family: roboto;
+  line-height: 1.7;
+  
+}
+body {
+  background: #ebf5fe;
+  padding: 100px;
+}
+section {
+  width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+article {
+  margin-top: 20px;
+  width: 350px;
+  background: #fff;
+  border-radius: 5px;
+}
+article:hover {
+  border: 1px solid red;
+}
+h3 {
+  margin-left: 10px;
+}
+a {
+  text-decoration: none;
+  font-weight: bold;
+  display: inline-block;
+  padding-bottom: 20px;
+}
+p {
+  color: #666;
+}
+.heading,
+p,
+a {
+  margin-left: 15px;
+  padding-top: 15px;
+}
+.heading {
+  display: flex;
+}
+.icon {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+img {
+  width: 40px;
+  height: 40px;
+}
+.icon-1 {
+  background: linear-gradient(to right, rgb(255, 51, 85), rgb(253, 117, 33));
+  box-shadow: rgba(255, 51, 85, 0.5) 0px 0px 35px;
+}
+.icon-2 {
+  background: linear-gradient(to right, rgb(12, 173, 117), rgb(17, 230, 155));
+  box-shadow: rgba(12, 173, 117, 0.5) 0px 0px 35px;
+}
+.icon-3 {
+  background: linear-gradient(to right, rgb(255, 98, 0), rgb(255, 174, 76));
+  box-shadow: rgb(255, 98, 0, 0.5) 0px 0px 35px;
+}
+.icon-4 {
+  background: linear-gradient(to right, rgb(24, 24, 185), rgb(107, 107, 255));
+  box-shadow: rgb(24, 24, 185, 0.5) 0px 0px 35px;
+}
+.icon-5 {
+  background: linear-gradient(to right, rgb(159, 0, 221), rgb(200, 60, 255));
+  box-shadow: rgb(159, 0, 221, 0.5) 0px 0px 35px;
+}
+.icon-6 {
+  background: linear-gradient(to right, green, rgb(98, 255, 98));
+  box-shadow: rgba(0, 128, 0, 0.5) 0px 0px 35px;
+}
