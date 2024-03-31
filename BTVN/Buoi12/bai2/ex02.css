@@ -1,0 +1,173 @@
+/* nhúng code icon hambuger https://cdnjs.com/libraries/font-awesome   */
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css);
+/* reset css */
+ *{
+    margin: 0;
+    padding: 0;
+    outline: 0; 
+    box-sizing: border-box;
+ }
+
+ html{
+    font-size: 10px;
+ }
+
+ body{
+    font-size: 1.6rem;
+    font-family: Roboto, sans-serif;
+    color: #333;
+    line-height: 1.2;
+ }
+
+ .container{
+    max-width: 1200px;
+    margin: 0 auto;
+ }
+
+ a{
+    color: #333;
+    text-decoration: none;
+ }
+
+ img{
+    max-width: 100%;
+    height: auto;
+ }
+
+ ul, ol {
+    list-style: none;
+ }
+
+
+ /* css header  */
+ .header{
+    padding: 15px 0;
+ }
+
+ /* css các phần tử trong header-row lên cùng 1 hàng: logo,  menu. contact  */
+ .header .header-row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+ }
+
+/* css menu lên cùng 1 hàng  */
+.header .header-row .menu ul{
+    display: flex;
+}
+
+/* css memu căn bên phải  */
+.header .header-row .menu{
+    margin-left: auto;
+}
+
+/* căn chỉnh khoảng cách giữa các menu */
+.header .header-row .menu ul li a {
+    display: block;
+    padding: 0 20px;
+    font-weight: 500;
+}
+ 
+/* css thêm icon mũi tên xuống vào menu  */
+.header .header-row .menu ul li a::after{
+    content:"\25be";
+    margin-left: 1px;
+    font-size: 2rem; 
+    color:  #75b7eb;;
+}
+
+/* css contact  */
+.header .header-row .contact .btn{
+    background-color: #75b7eb;
+    display: block;
+    padding: 10px 30px;
+    border-radius: 99px;
+    color: white;
+    font-weight: 400px;
+    margin-left: 20px;
+}
+
+/* CSS responsive 
+>=992px => desktop
+<992px và >798px => tablet 
+< 768px => mobile */
+
+/* css desktop first  */
+.header .header-row .menu-toggle{
+    display: none;
+}
+
+.header .header-row .overlay{
+    position: fixed;
+    inset: 0;
+    background-color: #0000006b;
+    opacity: 0;
+    transition: 0.4s ease;
+    visibility: hidden; /* ẩn đi mà ko mất ko gian */
+    transition-property: opacity, visibility;
+}
+
+/* css tablet first  */
+@media screen and (max-width: 991px){
+.container{
+    padding: 0 15px;
+}
+    .header .header-row .menu{
+        display: block;
+        position: fixed;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        min-width: 250px;
+        background-color: black;
+        translate: -100%;
+        transition: translate 0.4s ease ;
+        z-index: 1;
+    }
+
+    .header .header-row .menu ul {
+        display: block;
+        padding: 20px 0px;
+    }
+    
+    .header .header-row .menu ul li a{
+        color: white;
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    .header .header-row .menu-toggle{
+        display: block;
+        font-size: 2.5rem;
+
+    } 
+    
+    .header .header-row .contact{
+        margin-left: auto;
+        margin-right: 20px;
+    }
+
+
+    .header .header-row input[type="checkbox"]:checked ~ .menu{
+        translate: 0;
+    } 
+
+    .header .header-row input[type="checkbox"]:checked ~ .overlay{
+        /* display: block; */
+        opacity: 1;
+        visibility: visible;
+    } 
+}
+
+
+/* css mobile  */
+
+@media screen and (max-width: 767px)
+{
+
+    .header .header-row .contact{
+        display: none;
+    }
+
+
+}
