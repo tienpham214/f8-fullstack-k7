@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Vikinger | Home</title>
+    <!-- grid system  -->
+    <link rel="stylesheet" href="./css/grid.css" />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="./css/bai1.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap"
+      rel="stylesheet"
+    />
+    <!-- font awesome -->
+    <script
+      src="https://kit.fontawesome.com/b3f370a139.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="landing">
+      <div class="landing-decoration"></div>
+      <!-- Column 1 -->
+      <div class="col-12 col-xxl-6">
+        <div class="landing-info">
+          <div class="logo">
+            <img class="icon-logo" src="./img/vikinger.svg" alt="" />
+          </div>
+          <!-- end logo  -->
+          <h2 class="landing-info-pretitle">Welcome to</h2>
+          <h1 class="langding-info-title">Vikinger</h1>
+          <p class="landing-info-text">
+            The next generation social network &amp; community! Connect with
+            your friends and play with our quests and badges gamification
+            system!
+          </p>
+
+          <!-- switch tab login and register  -->
+          <div class="tab-switch">
+            <!-- tab login  -->
+            <p class="tab-switch-button login-register-form-trigger">
+              <label class="switch-login">
+                <input
+                  type="radio"
+                  name="switch-login"
+                  value="login"
+                  hidden
+                  checked
+                />
+                <span>Login</span>
+              </label>
+            </p>
+            <!-- tab register  -->
+            <p class="tab-switch-button login-register-form-trigger">
+              <label class="switch-register">
+                <input type="radio" name="switch" value="register" hidden />
+                <span>Register</span>
+              </label>
+            </p>
+          </div>
+          <!-- end tab switch  -->
+        </div>
+        <!-- end column 1  -->
+
+        <!-- column 2  -->
+        <div class="col-12 col-xxl-6">
+          <!-- form box  -->
+          <div class="form-box login-register-form1">
+            <img src="./img/rocket.png" alt="rocket" />
+            <!-- box form login  -->
+            <h2 class="form-box-title">Account login</h2>
+            <form action="" class="form">
+              <div class="form-row">
+                <div class="form-item">
+                  <!-- form input  -->
+                  <div class="form-input">
+                    <label for="login-username" class="login-username"
+                      >Username or Email
+                    </label>
+                    <input
+                      type="text"
+                      name="login_username"
+                      id="login_username"
+                      required
+                    />
+                  </div>
+                  <!-- end form input  -->
+                </div>
+              </div>
+              <!-- end form row  -->
+
+              <!-- form login - password  -->
+              <div class="form-row">
+                <div class="form-item">
+                  <!-- form input  -->
+                  <div class="form-input">
+                    <label for="login-password"> Password </label>
+                    <input
+                      type="text"
+                      name="login-password"
+                      id="login_password"
+                      required
+                    />
+                  </div>
+                  <!-- end form input  -->
+                </div>
+              </div>
+              <!-- end form row  -->
+
+              <!-- row tick Remember, forgot password -->
+              <div class="from-row space-between">
+                <div class="form-item">
+                  <div class="checkbox-wrap">
+                    <input
+                      type="checkbox"
+                      id="login-remember"
+                      name="login_remember"
+                      checked
+                      required
+                    />
+
+                    <div class="checkbox-box">
+                      <img src="./img/cross.svg" alt="" class="icon-cross" />
+                    </div>
+
+                    <!-- end checkbox  -->
+                    <label for="login-remember">Remember me</label>
+                  </div>
+                  <!-- end checkbox wrap  -->
+                </div>
+                <!-- end form item -->
+                <!-- item forgot password  -->
+                <div class="form-item">
+                  <a href="#" class="form-link"> Forgot password</a>
+                </div>
+              </div>
+              <!-- end from-row space-between -->
+
+              <!-- form row login to your account  -->
+              <div class="form-row">
+                <div class="form-item">
+                  <button class="btn">Login to your Account!</button>
+                </div>
+              </div>
+            </form>
+            <!-- end form  -->
+            <!-- row login social  -->
+            <p class="lined-text">Login with your Social Account</p>
+            <div class="social-link">
+              <!-- facebook  -->
+              <a href="#" class="social-link facebook">
+                <img src="./img/facebook.svg" alt="" class="icon-facebook" />
+              </a>
+
+              <!-- twitter  -->
+              <a href="#" class="social-link twitter">
+                <img src="./img/twitter.svg" alt="" class="icon-twitter" />
+              </a>
+              <!-- twitch  -->
+              <a href="#" class="social-link twitch">
+                <img src="./img/twitch.svg" alt="" class="icon-twitch" />
+              </a>
+
+              <!-- youtube -->
+              <a href="#" class="social-link youtube"
+                ><img src="./img/youtube.svg" alt="" class="icon-youtube" />
+              </a>
+            </div>
+            <!-- end socical link  -->
+          </div>
+          <!-- end form-box login-register-form -->
+          <!-- form register Creat your account -->
+          <div class="form-box login-register-form2">
+            <img
+              class="form-box-decoration"
+              src="./img/rocket.png"
+              alt="rocket"
+            />
+            <h2 class="form-box-title">Create your Account!</h2>
+
+            <form class="form">
+              <!-- form register-email -->
+              <div class="form-row">
+                <div class="form-item">
+                  <div class="form-input">
+                    <label for="register-email"> Your email</label>
+                    <input
+                      type="text"
+                      name="register-email"
+                      id="register-email"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- end input register-email -->
+
+              <!-- form register-username -->
+              <div class="form-row">
+                <div class="form-item">
+                  <div class="form-input">
+                    <label for="register-username"> Username</label>
+                    <input
+                      type="text"
+                      name="register-username"
+                      id="register-username"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- end input register-email -->
+
+              <!-- form register-password -->
+              <div class="form-row">
+                <div class="form-item">
+                  <div class="form-input">
+                    <label for="register-password"> Password</label>
+                    <input
+                      type="text"
+                      name="register-password"
+                      id="register-password"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- end input repeat-password -->
+
+              <!-- form register-password -->
+              <div class="form-row">
+                <div class="form-item">
+                  <div class="form-input">
+                    <label for="register-password-repeat">
+                      Repeat Password</label
+                    >
+                    <input
+                      type="text"
+                      name="register-password-repeat"
+                      id="register-password-repeat"
+                      required
+                    />
+                  </div>
+                </div>
+              </div>
+              <!-- end input repeat-password -->
+
+              <!-- row register Send me news and updates via email -->
+
+              <div class="for-row">
+                <div class="form-item">
+                  <div class="checkbox-wrap">
+                    <input
+                      type="checkbox"
+                      name="register-newsletter"
+                      id="register-newsletter"
+                      checked
+                    />
+
+                    <div class="checkbox">
+                      <img src="./img/cross.svg" alt="" class="icon-cross" />
+                      <label for="register-newsletter"
+                        >Send me news and updates via email
+                      </label>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- end row register Send me news and updates via email -->
+
+              <!-- row button register now  -->
+              <div class="form-row">
+                <div class="form-item">
+                  <button class="button medium primary">Register Now!</button>
+                </div>
+              </div>
+
+              <!-- end row button register now -->
+            </form>
+            <!-- end form Cheat your account  -->
+
+            <!-- row cotact us  -->
+            <p class="form-text">
+              You'll receive a confirmation email in your inbox with a link to
+              activate your account. If you have any problems,
+              <a href="#">contact us</a>!
+            </p>
+
+            <!-- end row contact us  -->
+          </div>
+        </div>
+        <!-- end column 2 -->
+      </div>
+    </div>
+    <!--end landing-->
+  </body>
+</html>
