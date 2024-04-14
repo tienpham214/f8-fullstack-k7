@@ -61,6 +61,10 @@
   }
 }
 
+.col-4.d-toggle_menu {
+  display: none;
+}
+
 @media screen and (max-width: 991.98px) {
   .header {
     .logo {
@@ -129,5 +133,9 @@
         }
       }
     }
+  }
+
+  .col-4.d-toggle_menu {
+    display: none;
   }
 }

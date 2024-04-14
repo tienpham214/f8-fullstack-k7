@@ -114,6 +114,10 @@ ol {
   padding-left: 25px;
 }
 
+.col-4.d-toggle_menu {
+  display: none;
+}
+
 @media screen and (max-width: 991.98px) {
   .header .logo {
     display: flex;
@@ -165,6 +169,9 @@ ol {
   .header .header-nav input[type=checkbox]:checked ~ .menu-overlay {
     opacity: 1;
     visibility: visible;
+  }
+  .col-4.d-toggle_menu {
+    display: none;
   }
 }
 .footer {
