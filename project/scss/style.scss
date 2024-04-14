@@ -1,0 +1,29 @@
+//import partials
+@use "./partials/variables"; 
+@use "./partials/mixins";
+@use "./partials/base";
+@use "./partials/fonts";
+@use "./partials/reset";
+
+
+//components
+@use "./components/header";
+@use "./components/breadcrums";
+@use "./components/footer";
+
+//pages
+
+//1. home
+
+@use "./pages/home/index" as home;
+@use "./pages/home/contact" as contact;
+@use "./pages/home/counter" as counter;
+@use "./pages/home/feature" as feature;
+@use "./pages/home/hero" as hero;
+@use "./pages/home/posts" as post;
+@use "./pages/home/products" as products;
+@use "./pages/home/quality" as quality;
+
+
+// sass scss/style.scss css/style.css
+
