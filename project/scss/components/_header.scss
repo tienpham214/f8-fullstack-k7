@@ -135,7 +135,20 @@
     }
   }
 
+  
+}
+
+
+@media only screen and (min-width: 992px){
+
   .col-4.d-toggle_menu {
     display: none;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+
+  .col-4.d-toggle_menu {
+    display: block;
   }
 }
