@@ -34,10 +34,9 @@
             </label>
           </div>
           <!-- end icon menu toggle  -->
-
           <div class="col-4 col-lg-2">
             <div class="logo">
-              <a href="#">
+              <a href="./index.html">
                 <img src="./images/logo.png" alt="" />
               </a>
             </div>
@@ -52,11 +51,11 @@
               ></label>
               <nav class="menu">
                 <ul>
-                  <li><a class="active" href="#">Trang chủ</a></li>
-                  <li><a href="#">Về Greenchop</a></li>
-                  <li><a href="#">Sản phẩm</a></li>
-                  <li><a href="#">Tin tức</a></li>
-                  <li><a href="#">Liên hệ</a></li>
+                  <li><a class="active" href="#home">Trang chủ</a></li>
+                  <li><a href="#about">Về Greenchop</a></li>
+                  <li><a href="#product">Sản phẩm</a></li>
+                  <li><a href="#post">Tin tức</a></li>
+                  <li><a href="#contact">Liên hệ</a></li>
                 </ul>
               </nav>
 
@@ -80,7 +79,7 @@
     </header>
     <!--End .header-->
 
-    <section class="hero">
+    <section class="hero" id="about">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-12 col-lg-6">
@@ -175,7 +174,7 @@
     </section>
     <!--End .counter-->
 
-    <section class="products">
+    <section class="products" id="product">
       <div class="container">
         <h2>Sản phẩm</h2>
         <div class="products-list">
@@ -332,7 +331,7 @@
     <section class="posts">
       <div class="container">
         <div class="posts-heading">
-          <h2>Tin tức</h2>
+          <h2 id="post">Tin tức</h2>
           <p>
             L nulla facilisis at vero eros et accumsan et iusto odio dignissim
             qui blandit praesent luptatum zzril delenit augue duis dolore te
@@ -990,7 +989,7 @@
     </section>
     <!--End .quality-->
 
-    <section class="contact">
+    <section class="contact" id="contact">
       <div class="container">
         <div class="row">
           <div class="col-6 d-none d-md-block">
@@ -1042,7 +1041,13 @@
                   ></textarea>
                 </div>
                 <div class="form-btn">
-                  <button type="submit" class="btn btn-primary">Gửi</button>
+                  <button
+                    type="submit"
+                    class="btn btn-primary"
+                    style="cursor: pointer"
+                  >
+                    Gửi
+                  </button>
                 </div>
               </form>
             </div>
@@ -1065,11 +1070,11 @@
             </div>
             <div class="col-xl-3">
               <div class="footer-item">
-                <p class="title">Trang chủ</p>
+                <p class="title" id="home">Trang chủ</p>
                 <ul>
-                  <li><a href="#">Về Greenchop</a></li>
-                  <li><a href="#">Sản phẩm</a></li>
-                  <li><a href="#">Tin tức</a></li>
+                  <li><a href="#about">Về Greenchop</a></li>
+                  <li><a href="#product">Sản phẩm</a></li>
+                  <li><a href="#post">Tin tức</a></li>
                 </ul>
               </div>
               <!--End .footer-item-->
@@ -1298,6 +1303,12 @@
         </div>
         <!--End .footer-bottom-->
       </div>
+      <!-- back to top  -->
+      <a href="#" class="totop">
+        <span class="icon-top">
+          <i class="fa-solid fa-jet-fighter-up"></i
+        ></span>
+      </a>
     </footer>
     <!--End .footer-->
   </body>
