@@ -1,0 +1,7 @@
+{
+  "beautify.options": {},
+  "editor.formatOnSave": true,
+  "css.format.enable": false,
+  "scss.format.enable": false,
+  "less.format.enable": false
+}

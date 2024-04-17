@@ -1,0 +1,132 @@
+@import "../../partials/variables";
+
+.feature {
+  padding: 36px 0 116px;
+  position: relative;
+
+  .feature-heading {
+    text-align: center;
+    
+    margin-bottom: 50px;
+    h2 {
+      margin-bottom: 24.33px;
+      color: $textColor;
+      text-align: center;
+      font-family: Inter;
+      font-size: 31.667px;
+      font-style: normal;
+      font-weight: 800;
+      line-height: 131.523%;
+    }
+    p{
+      color: $textColor;
+      text-align: center;
+      font-family: Inter;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20.417px;  
+    }
+  }
+
+  .feature-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 25px;
+
+    .feature-item {
+      flex-basis: 29%;
+      max-width: 29%;
+      background: #fff;
+      border-radius: 8.333px;
+
+      .image {
+        margin-bottom: 24.17px;
+        img {
+          display: block;
+          border-radius: 8.333px;
+        }
+      }
+
+      .info {
+        padding: 0 18.33px 5px 27.5px;
+        h3 {
+          margin-bottom: 6.33px;
+          color: #E05000;
+          text-shadow: 0px 3.333px 3.333px rgba(0, 0, 0, 0.25);
+          font-family: Inter;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 26.667px;
+        }
+
+        p {
+          color: #19191B;
+          font-family: Inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20.417px;
+          width: auto; 
+          overflow: hidden; //ẩn đoạn văn bản bị thừa
+          text-overflow: ellipsis; //cho ngắt đoạn văn thành ...
+          -webkit-line-clamp: 5; // hiển thị đoạn văn bản 5 dòng
+          display: -webkit-box;
+         -webkit-box-orient: vertical;
+         padding-bottom: 10px;
+        }
+      }
+    }
+  }
+
+  &::after {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 50%;
+    z-index: -1;
+    background: #fff0e7;
+    border-radius: 8.333px;
+  }
+}
+
+@media screen and (max-width: 991.98px) {
+  .feature {
+    padding: 30px 0;
+    .feature-heading {
+      max-width: 100%;
+    }
+    .feature-list {
+      flex-wrap: wrap;
+      .feature-item {
+        flex-basis: calc(50% - 25px);
+        max-width: calc(50% - 25px);
+        margin-bottom: 25px;
+        .image {
+          img {
+            width: 100%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 575.98px) {
+  .feature {
+    .feature-list {
+      .feature-item {
+        flex-basis: 100%;
+        max-width: 100%;
+      }
+    }
+
+    &::after {
+      top: 0;
+    }
+  }
+}
