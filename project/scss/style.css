@@ -180,6 +180,10 @@ a:hover {
   cursor: pointer;
 }
 
+html {
+  overflow: auto;
+}
+
 .header {
   padding: 10px 0;
   box-shadow: 0px 1.6666666269px 8.3333330154px 0px rgba(0, 0, 0, 0.15);
