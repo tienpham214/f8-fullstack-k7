@@ -4,6 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+
+    <style>
+      /* Định dạng phần tử chứa bàn cờ */
+      #chessboard {
+        display: flex;
+        flex-wrap: wrap;
+        width: 400px; /* Điều chỉnh kích thước bàn cờ tùy thích */
+      }
+
+      /* Định dạng hàng */
+      .row {
+        display: flex;
+      }
+
+      /* Định dạng ô */
+      .square {
+        width: 50px; /* Điều chỉnh kích thước ô tùy thích */
+        height: 50px; /* Điều chỉnh kích thước ô tùy thích */
+        border: 1px solid #000; /* Đường viền của ô */
+      }
+
+      /* Định dạng ô màu đen */
+      .black {
+        background-color: #888; /* Màu sắc của ô màu đen */
+      }
+    </style>
   </head>
   <body style="text-align: center; padding: 100px; font-size: 30px">
     <h1>Bài 6: Vẽ bàn cờ vua</h1>
@@ -14,6 +40,8 @@
     </p>
 
     <hr />
+
+    <!--  Đây là nơi mà chúng ta sẽ vẽ bàn cờ -->
     <div id="chessboard"></div>
   </body>
   <script src="./bai6.js"></script>
