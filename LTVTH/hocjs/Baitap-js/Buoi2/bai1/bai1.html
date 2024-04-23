@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body style="text-align: center; padding: 100px; font-size: 30px">
+    <h1>Bài 1: Tính tiền taxi</h1>
+    <p>
+      Tính tiền cước taxi dựa vào các điều kiện sau: <br />
+      Số km ≤ 1 giá 15000đ <br />
+      số km ≤ 5 giá 13500đ <br />
+      Số km> 5 giá 11000đ <br />
+      Nếu số km > 120 km sẽ được giảm 10% trên tổng số tiền
+    </p>
+    <hr />
+
+    <!-- FORM SWAP  -->
+    <h2>Calculator Taxi</h2>
+
+    <label for="distance">Nhập số km đã đi:</label>
+    <input type="number" id="distance" name="distance" min="0" step="any" />
+    <button onclick="calculateTaxiFare()">Tính tiền</button>
+
+    <p id="fareResult"></p>
+  </body>
+  <script src="./bai1.js"></script>
+</html>
