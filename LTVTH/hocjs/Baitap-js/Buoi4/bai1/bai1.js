@@ -41,3 +41,25 @@ var interval = setInterval(function () {
 }, 500);
 
 // Cho chuỗi text bất kỳ, yêu cầu chạy từng từ màu đỏ, sau 0,5s đổi màu đen, tương tự với các từ tiếp theo, sau đó lặp liên tục
+
+/* Cú pháp của phương thức substring() như sau:
+
+javascript
+Copy code
+string.substring(startIndex, endIndex)
+Trong đó:
+
+startIndex: là chỉ mục của ký tự bắt đầu của phần con chuỗi cần trích xuất. Chỉ mục này bắt đầu từ 0.
+endIndex (tùy chọn): là chỉ mục của ký tự kết thúc của phần con chuỗi cần trích xuất. Đây là chỉ mục của ký tự sau ký tự cuối cùng trong phần con chuỗi. Nếu không được cung cấp, phương thức sẽ trích xuất từ startIndex đến hết chuỗi.
+
+
+var str = "Hello world";
+var subStr1 = str.substring(6); // Kết quả: "world"
+var subStr2 = str.substring(0, 5); // Kết quả: "Hello"
+Trong ví dụ trên:
+
+subStr1 trích xuất từ vị trí thứ 6 (ký tự "w") đến hết chuỗi.
+subStr2 trích xuất từ vị trí thứ 0 đến vị trí thứ 5 (ký tự "H" đến "o", không bao gồm "o" đó).
+
+
+*/
