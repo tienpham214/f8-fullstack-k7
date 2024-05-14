@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #posts-container {
+        width: 1200px;
+        margin: 0 auto;
+      }
+      .post {
+        display: flex;
+        margin-bottom: 20px;
+        border-bottom: 1px solid #ccc;
+        padding-bottom: 20px;
+        align-items: flex-start; /* Đảm bảo các phần tử trong bài viết thẳng hàng */
+      }
+      .post img {
+        width: 1020px;
+        height: 230px;
+        /* object-fit: cover; */
+      }
+      .post-content {
+        flex-grow: 1; /* Cho phép nội dung mở rộng để lấp đầy không gian có sẵn */
+        padding: 0 20px;
+        text-align: left;
+      }
+      .post-title {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 10px;
+      }
+      .post-description {
+        font-size: 26px;
+      }
+      .post.reverse {
+        flex-direction: row-reverse;
+      }
+      .post.reverse .post-content {
+        padding: 0 20px 0 0;
+      }
+    </style>
+  </head>
+  <body style="text-align: center; padding: 100px; font-size: 30px"></body>
+  <h1>
+    Bài 4 Dựa vào hình ảnh giao diện sau, hãy thiết kế 1 mảng phù hợp và thực
+    hiện đổ dữ liệu lên giao diện
+  </h1>
+  <img src="./img.png" alt="" />
+  <hr />
+  <h2>Result:</h2>
+  <div id="posts-container"></div>
+  <script src="./bai4.js"></script>
+</html>
