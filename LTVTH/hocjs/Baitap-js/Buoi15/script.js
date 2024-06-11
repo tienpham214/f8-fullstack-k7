@@ -1,7 +1,7 @@
 function startRecognition() {
-  const SpeechRecognition =
+  var SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
-  const recognition = new SpeechRecognition();
+  var recognition = new SpeechRecognition();
   recognition.lang = "vi-VN";
 
   recognition.onstart = function () {
@@ -14,7 +14,7 @@ function startRecognition() {
   };
 
   recognition.onresult = function (event) {
-    const transcript = event.results[0][0].transcript.toLowerCase();
+    var transcript = event.results[0][0].transcript.toLowerCase();
     console.log("Transcript: ", transcript);
 
     if (transcript.includes("google")) {
@@ -31,7 +31,7 @@ function startRecognition() {
     ) {
       window.open("https://maps.google.com", "_blank");
     } else if (transcript.startsWith("chỉ đường tới")) {
-      const location = transcript.replace("chỉ đường tới", "").trim();
+      var location = transcript.replace("chỉ đường tới", "").trim();
       window.open(
         `https://maps.google.com?q=${encodeURIComponent(location)}`,
         "_blank"
@@ -41,7 +41,7 @@ function startRecognition() {
       transcript.includes("mở bài hát") ||
       transcript.includes("nghe bài hát")
     ) {
-      const song =
+      var song =
         transcript.split("bài hát ")[1] ||
         transcript.split("mở bài hát ")[1] ||
         transcript.split("nghe bài hát ")[1];
@@ -56,7 +56,7 @@ function startRecognition() {
         alert("Không thể nhận diện tên bài hát.");
       }
     } else if (transcript.startsWith("mở video")) {
-      const video = transcript.replace("mở video", "").trim();
+      var video = transcript.replace("mở video", "").trim();
       window.open(
         `https://www.youtube.com/results?search_query=${encodeURIComponent(
           video
