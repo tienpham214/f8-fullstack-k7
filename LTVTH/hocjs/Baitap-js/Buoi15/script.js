@@ -1,7 +1,7 @@
 function startRecognition() {
-  var SpeechRecognition =
+  const SpeechRecognition =
     window.SpeechRecognition || window.webkitSpeechRecognition;
-  var recognition = new SpeechRecognition();
+  const recognition = new SpeechRecognition();
   recognition.lang = "vi-VN";
 
   recognition.onstart = function () {
@@ -14,7 +14,7 @@ function startRecognition() {
   };
 
   recognition.onresult = function (event) {
-    var transcript = event.results[0][0].transcript.toLowerCase();
+    const transcript = event.results[0][0].transcript.toLowerCase();
     console.log("Transcript: ", transcript);
 
     if (transcript.includes("google")) {
@@ -31,15 +31,27 @@ function startRecognition() {
     ) {
       window.open("https://maps.google.com", "_blank");
     } else if (transcript.startsWith("chỉ đường tới")) {
-      var location = transcript.replace("chỉ đường tới", "").trim();
+      const location = transcript.replace("chỉ đường tới", "").trim();
       window.open(`https://maps.google.com?q=${location}`, "_blank");
-    } else if (transcript.startsWith("bài hát")) {
-      var song = transcript.replace("bài hát", "").trim();
-      window.open(`https://zingmp3.vn/search?q=${song}`, "_blank");
-    } else if (transcript.startsWith("mở video")) {
-      var video = transcript.replace("mở video", "").trim();
+    } else if (
+      transcript.includes("bài hát") ||
+      transcript.includes("mở bài hát") ||
+      transcript.includes("nghe bài hát")
+    ) {
+      const song =
+        transcript.split("bài hát ")[1] ||
+        transcript.split("mở bài hát ")[1] ||
+        transcript.split("nghe bài hát ")[1];
       window.open(
-        `https://www.youtube.com/results?search_query=${video}`,
+        `https://zingmp3.vn/search?q=${encodeURIComponent(song)}`,
+        "_blank"
+      );
+    } else if (transcript.startsWith("mở video")) {
+      const video = transcript.replace("mở video", "").trim();
+      window.open(
+        `https://www.youtube.com/results?search_query=${encodeURIComponent(
+          video
+        )}`,
         "_blank"
       );
     } else {
