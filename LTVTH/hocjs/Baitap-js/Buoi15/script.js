@@ -32,11 +32,14 @@ function startRecognition() {
       window.open("https://maps.google.com", "_blank");
     } else if (transcript.startsWith("chỉ đường tới")) {
       const location = transcript.replace("chỉ đường tới", "").trim();
-      window.open(`https://maps.google.com?q=${location}`, "_blank");
+      window.open(
+        `https://maps.google.com?q=${encodeURIComponent(location)}`,
+        "_blank"
+      );
     } else if (
-      transcript.includes("bài hát ") ||
-      transcript.includes("mở bài hát ") ||
-      transcript.includes("nghe bài hát ")
+      transcript.includes("bài hát") ||
+      transcript.includes("mở bài hát") ||
+      transcript.includes("nghe bài hát")
     ) {
       const song =
         transcript.split("bài hát ")[1] ||
@@ -44,7 +47,9 @@ function startRecognition() {
         transcript.split("nghe bài hát ")[1];
       if (song) {
         window.open(
-          `https://zingmp3.vn/search?q=${encodeURIComponent(song.trim())}`,
+          `https://zingmp3.vn/tim-kiem/tat-ca?q=${encodeURIComponent(
+            song.trim()
+          )}`,
           "_blank"
         );
       } else {
