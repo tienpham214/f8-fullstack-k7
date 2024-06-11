@@ -34,18 +34,22 @@ function startRecognition() {
       const location = transcript.replace("chỉ đường tới", "").trim();
       window.open(`https://maps.google.com?q=${location}`, "_blank");
     } else if (
-      transcript.includes("bài hát") ||
-      transcript.includes("mở bài hát") ||
-      transcript.includes("nghe bài hát")
+      transcript.includes("bài hát ") ||
+      transcript.includes("mở bài hát ") ||
+      transcript.includes("nghe bài hát ")
     ) {
       const song =
         transcript.split("bài hát ")[1] ||
         transcript.split("mở bài hát ")[1] ||
         transcript.split("nghe bài hát ")[1];
-      window.open(
-        `https://zingmp3.vn/search?q=${encodeURIComponent(song)}`,
-        "_blank"
-      );
+      if (song) {
+        window.open(
+          `https://zingmp3.vn/search?q=${encodeURIComponent(song.trim())}`,
+          "_blank"
+        );
+      } else {
+        alert("Không thể nhận diện tên bài hát.");
+      }
     } else if (transcript.startsWith("mở video")) {
       const video = transcript.replace("mở video", "").trim();
       window.open(
