@@ -9,9 +9,12 @@
   <body>
     <div class="container">
       <h1>Bạn muốn làm gì? Hãy nói cho F8 biết</h1>
-      <button class="button" onclick="startRecognition()">
+      <button class="button" id="startButton" onclick="startRecognition()">
         Bấm vào đây để nói
       </button>
+      <div id="transcript" class="output"></div>
+      <div id="suggestions" class="output"></div>
+      <div id="confirmation" class="output"></div>
     </div>
     <script src="script.js"></script>
   </body>

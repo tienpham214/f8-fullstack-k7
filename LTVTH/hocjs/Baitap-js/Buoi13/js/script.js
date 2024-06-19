@@ -48,6 +48,7 @@ if (sliderItems.length) {
 
   function slideTo(index) {
     currentTranslate = -itemWidth * index;
+    sliderInner.style.transition = "transform 0.5s ease"; // Thêm hiệu ứng transition
     sliderInner.style.transform = "translateX(" + currentTranslate + "px)";
     setActiveDot(index);
     currentIndex = index;
@@ -73,16 +74,17 @@ if (sliderItems.length) {
     e.preventDefault();
     isDragging = true;
     startX = e.clientX;
-    clearInterval(autoSlideInterval); // Dừng auto slide khi bắt đầu kéo
+    clearInterval(autoSlideInterval);
+    sliderInner.style.transition = "none"; // Tắt transition khi kéo
   }
 
   function onMouseUp(e) {
     e.preventDefault();
     isDragging = false;
-    sliderInner.style.transition = "";
+    sliderInner.style.transition = "transform 0.5s ease"; // Bật lại transition khi thả chuột
     slideTo(currentIndex);
     hasMoved = false;
-    startAutoSlide(); // Bắt đầu lại auto slide khi thả chuột
+    startAutoSlide();
   }
 
   function onMouseMove(e) {
@@ -95,7 +97,7 @@ if (sliderItems.length) {
     if (Math.abs(dx) < moveThreshold) {
       sliderInner.style.transform =
         "translateX(" + (currentTranslate + dx) + "px)";
-      sliderInner.style.transition = "none";
+      sliderInner.style.transition = "none"; // Tắt transition khi kéo
     } else {
       if (dx < 0 && Math.abs(currentTranslate) < totalWidth - itemWidth) {
         slideTo(currentIndex + 1);
@@ -113,9 +115,9 @@ if (sliderItems.length) {
       if (currentIndex < sliderItems.length - 1) {
         slideTo(currentIndex + 1);
       } else {
-        slideTo(0); // Quay lại slide đầu tiên nếu đang ở slide cuối
+        slideTo(0);
       }
-    }, 3000); // Thời gian giữa các slide, ở đây là 3 giây
+    }, 3000);
   }
 
   function stopAutoSlide() {
@@ -125,16 +127,13 @@ if (sliderItems.length) {
   createDots();
   updateSliderWidth();
   setActiveDot(0);
-  startAutoSlide(); // Bắt đầu auto slide khi trang được tải
+  startAutoSlide();
 
   navNext.addEventListener("click", onNextClick);
   navPrev.addEventListener("click", onPrevClick);
   sliderInner.addEventListener("mousedown", onMouseDown);
   sliderInner.addEventListener("mouseup", onMouseUp);
   sliderInner.addEventListener("mousemove", onMouseMove);
-
-  // Tạm dừng auto slide khi di chuột vào slider
   slider.addEventListener("mouseenter", stopAutoSlide);
-  // Tiếp tục auto slide khi rời chuột khỏi slider
   slider.addEventListener("mouseleave", startAutoSlide);
 }
