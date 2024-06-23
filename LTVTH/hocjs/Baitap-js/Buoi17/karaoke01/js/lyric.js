@@ -2004,6 +2004,4 @@ g.addEventListener("loadeddata", function () {
   }),
   i.addEventListener("mouseout", function () {
     n.style.display = "none";
-  }); //# sourceMappingURL=index.245c5bd0.js.map
-
-//# sourceMappingURL=index.245c5bd0.js.map
+  });
