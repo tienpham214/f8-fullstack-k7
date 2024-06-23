@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 2000px;
+      }
+
+      .top-btn {
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+        z-index: 1000;
+        padding: 5px;
+        display: none;
+      }
+
+      .top-btn.show {
+        display: block;
+      }
+
+      /* css phần bài tập khác  */
+      .tabs {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        background-color: yellow;
+        display: flex;
+        justify-content: center;
+        padding: 10px 0;
+      }
+
+      .tab {
+        margin: 0 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        border: none;
+        background-color: white;
+        border-radius: 5px;
+      }
+
+      .tab.active {
+        background-color: red;
+        color: white;
+      }
+
+      .content {
+        margin-top: 60px;
+        padding: 20px;
+      }
+
+      .section {
+        margin: 50px 0;
+      }
+      p {
+        height: 350px;
+        background: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="tabs">
+      <button class="tab" data-section="section1">Section 1</button>
+      <button class="tab" data-section="section2">Section 2</button>
+      <button class="tab" data-section="section3">Section 3</button>
+    </div>
+    <div class="content">
+      <div id="section1" class="section">
+        <h2>Section 1</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Aperiam alias
+          dolore cupiditate optio delectus cum magnam! Similique, itaque
+          exercitationem. Reiciendis fuga, fugiat, quasi soluta enim sapiente ut
+          dolore voluptatem sequi vero molestias consequuntur facilis, doloribus
+          quo. Quam tempore adipisci rerum corrupti doloremque tempora. Modi,
+          exercitationem nisi? Incidunt voluptates impedit, tenetur, aliquam
+          harum, hic at recusandae ipsum sapiente quo nisi. Optio sed
+          repellendus dolorem provident repudiandae dolor, facere temporibus quo
+          magni ad. Laudantium rerum obcaecati at pariatur sunt minus nesciunt
+          soluta, repellendus magnam deserunt corporis vitae veniam et, a,
+          dolorum odio? Dolorem accusantium ipsam fugiat adipisci. Sint
+          molestias est quasi officia.
+        </p>
+      </div>
+      <div id="section2" class="section">
+        <h2>Section 2</h2>
+        <p>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia
+          libero aperiam voluptatum ullam ipsa ducimus nostrum adipisci deleniti
+          perspiciatis ipsam eveniet id asperiores numquam similique eligendi
+          amet omnis optio, ratione hic eaque sapiente consectetur ad sed
+          placeat! Soluta eaque quia doloribus molestias hic sint cum voluptates
+          dolor aut ea temporibus quasi sunt porro asperiores assumenda optio ex
+          eius, officiis in modi illo? Doloremque cumque dolorum repellendus
+          nulla porro voluptates magni autem. Dignissimos est consequatur eaque
+          velit recusandae ullam necessitatibus veniam, blanditiis deserunt sit
+          quae quas quia voluptatem voluptatum laborum excepturi totam ipsa
+          sunt. Fugiat, magni nemo deserunt minima sequi eos?
+        </p>
+      </div>
+      <div id="section3" class="section">
+        <h2>Section 3</h2>
+        <p>
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Voluptatum
+          rem perferendis ab molestias hic ullam suscipit! Necessitatibus quod,
+          sed exercitationem ab vel, optio accusamus modi neque odio ut laborum
+          cupiditate rem quidem animi? Illum accusamus assumenda obcaecati
+          voluptatum delectus eaque excepturi alias eveniet odit ratione? Quas,
+          fugiat. Eos sit molestiae possimus iste. Provident molestias
+          accusantium excepturi dicta alias nobis illo esse quasi, modi ducimus
+          deserunt suscipit doloribus laudantium labore cum corrupti quo magni
+          perferendis eveniet? Blanditiis cumque suscipit nostrum recusandae
+          voluptate, fugiat quaerat dignissimos libero corporis dolore sapiente,
+          necessitatibus, asperiores tempora impedit dicta explicabo. Nostrum
+          incidunt est autem similique obcaecati.
+        </p>
+      </div>
+    </div>
+
+    <button class="btn">Click me</button>
+    <button class="top-btn">Top</button>
+    <script src="js/ex15.js"></script>
+  </body>
+</html>
