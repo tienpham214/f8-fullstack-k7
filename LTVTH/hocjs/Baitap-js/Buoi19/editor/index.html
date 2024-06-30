@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Doc Editor</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="editor-container">
+      <div class="toolbar">
+        <div class="file-menu">
+          <button id="fileButton" class="file-btn">File ▼</button>
+          <div id="fileMenu" class="file-menu-content">
+            <button id="newFile">New</button>
+            <button id="saveTxt">Save as TXT</button>
+            <button id="savePdf">Save as PDF</button>
+          </div>
+        </div>
+        <input type="text" id="fileName" placeholder="untitled" />
+        <button id="boldButton" class="format-btn"><b>b</b></button>
+        <button id="underlineButton" class="format-btn"><u>u</u></button>
+        <button id="italicButton" class="format-btn"><i>i</i></button>
+        <input type="color" id="colorPicker" class="format-btn" />
+      </div>
+      <div id="editor" contenteditable="true"></div>
+      <div id="wordCount">Số ký tự: 0 | Số từ: 0</div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/html2pdf.js@0.9.2/dist/html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

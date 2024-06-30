@@ -1,0 +1,99 @@
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.editor-container {
+    width: 80%;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.toolbar {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.file-menu {
+    position: relative;
+}
+
+.file-menu-content {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    z-index: 1;
+}
+
+.file-menu-content button {
+    display: block;
+    width: 100%;
+    padding: 5px 10px;
+    text-align: left;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.file-menu-content button:hover {
+    background-color: #f0f0f0;
+}
+
+.file-btn {
+    margin-right: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.file-btn:hover {
+    background-color: #0056b3;
+}
+
+#fileName {
+    flex: 1;
+    padding: 5px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+.format-btn {
+    margin-right: 5px;
+    padding: 5px 10px;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+}
+
+.format-btn:hover {
+    background-color: #0056b3;
+}
+
+#colorPicker {
+    border: none;
+    cursor: pointer;
+}
+
+#editor {
+    border: 1px solid #ccc;
+    padding: 10px;
+    min-height: 300px;
+    background-color: white;
+    overflow-y: auto;
+}
+
+#wordCount {
+    margin-top: 10px;
+    text-align: right;
+    color: #333;
+}
