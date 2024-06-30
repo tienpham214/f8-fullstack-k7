@@ -1,74 +1,83 @@
-//Web component
-
 /*
-Web component sẽ chia các thành phần trang web thành các thẻ html riêng biệt, dễ dàng tái sử dụng 
-
+Web Component: Chia nhỏ các thành phần trang web thành các thẻ html riêng biệt, dễ dàng tái sử dụng
 - header
 - footer
 - product
 
-Khi nào cần tách web component :
-+ khi cần sử dụng ở nhiều nơi
-+ linh hoạt (chỉ cần gọi thẻ html)
-+ logic, giao diện phức tạp 
+Khi nào cần tách web component
+- Sử dụng ở nhiều nơi
+- Linh hoạt (Chỉ cần gọi thẻ html)
+- Logic, giao diện phức tạp
 
+Các bước định nghĩa component
 
-- CÁC BƯỚC ĐỊNH NGHĨA COMPONENT
-1. Xây dựng class tương ứng, kế thừa HTMLElement
-2. xác định logic cần có trong component
-3. đăng ký thẻ html. Lưu ý tên thẻ phải có 2 từ và nối bằng gạch ngang
+- Xây dựng class tương ứng (Kế thừa từ HTMLElement)
+- Xác định logic cần có trong component
+- Đăng ký thẻ html (Lưu ý: Tên thẻ phải có 2 từ và nối bằng gạch ngang)
 
 Lifecycle Callback
-- vòng đời khi 1 component được tạo ra đến khi nó bị loại bỏ khỏi DOM
-- 3 GIAI đoạn:
-+ khởi tọa 
-+ cập nhật
-+ loại bỏ
+- Vòng đời khi 1 component được tạo ra đến khi nó bị loại bỏ khỏi DOM
+- 3 giai đoạn: 
++ Khởi tạo
++ Cập nhật
++ Loại bỏ
 
-
-Khi làm việc với Web component  => giải quyết đc vấn đề css (Scope stylesheet) => shadow DOM
+Khi làm việc với web component ==> Giải quyết được vấn đề css (Scope Stylesheet) ==> SHADOW DOM
 */
+//các nội dung xử lý liên quan tới giao diện: inner, query thì cho shadowRoot
 
 class TodoApp extends HTMLElement {
-  // static observedAttributes = ["data-count"];
+  //   static observedAttributes = ["data-count"];
   connectedCallback() {
     this.render();
-
-    this.innerHTML = `<h1> Todo App </h1>
-   <ul>
-   <li>To do 1 </li>
-   <li>To do 2 </li>
-   <li>To do 3 </li>
-   </ul>
-   
-   <form>
-   <input type ="text">
-   placeholder ="Name..."/>
-   <button type="submit">Add</button> 
-   </form>`;
+    this.addEvent();
   }
-
+  render() {
+    this.innerHTML = `
+    <div class="todo-app">
+        <h1>Todo App</h1>
+        <ul>
+        <li>Todo 1</li>
+        <li>Todo 2</li>
+        <li>Todo 3</li>
+        </ul>
+        <form>
+            <input type="text" placeholder="Name..."/>
+            <button type="submit">Add</button>
+        </form>
+    </div>
+    <style>
+        h1 {
+            color: red;
+        }
+    </style>
+    `;
+  }
   addEvent() {
     var form = this.querySelector("form");
     var _this = this;
     form.addEventListener("submit", function (e) {
       e.preventDefault();
-      _this.preventDefault;
+      _this.handleAddTodo(e.target);
     });
   }
-
+  handleAddTodo(event) {
+    var nameEl = event.querySelector("input");
+    var name = nameEl.value;
+    var ul = this.querySelector("ul");
+    ul.innerHTML += `<li>${name}</li>`;
+    nameEl.value = "";
+  }
   //   disconnectedCallback() {
-  //     console.log("component được loại bỏ khỏi DOM");
+  //     console.log("Component bị loại bỏ khỏi DOM");
   //   }
-
-  //   attributeChangeCallback(name, oldValue, newValue) {
+  //   attributeChangedCallback(name, oldValue, newValue) {
   //     console.log(
-  //       `thay đổi thuộc tính ${name}, giá trị cũ ${oldValue}, giá trị mới ${newValue} `
+  //       `Thay đổi thuộc tính ${name}, giá trị cũ: ${oldValue}, giá trị mới ${newValue}`
   //     );
   //   }
 }
-
-// customElements.define("todo-app", TodoApp);
+customElements.define("todo-app", TodoApp);
 
 // var btn = document.querySelector(".btn");
 // var todoAppEl = document.querySelector("todo-app");

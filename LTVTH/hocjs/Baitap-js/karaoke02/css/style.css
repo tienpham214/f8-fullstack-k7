@@ -1,0 +1,153 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  outline: 0;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.player {
+  display: flex;
+  align-items: center;
+}
+
+.play-btn {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.progress-bar {
+  width: 100%;
+  position: relative;
+  height: 10px;
+  background: gray;
+  margin: 0 20px;
+  cursor: pointer;
+}
+
+.progress-bar:hover {
+  background: greenyellow;
+}
+
+.progress-bar .progress {
+  position: absolute;
+  background: red;
+  top: 0;
+  left: 0;
+  bottom: 0;
+}
+
+.progress-bar .progress span {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  bottom: 0;
+  width: 15px;
+  height: 15px;
+  display: block;
+  border-radius: 50%;
+  background: blueviolet;
+  translate: 50% -50%;
+}
+
+.progress-bar .time-preview {
+  position: absolute;
+  top: 0;
+  translate: -50% -110%;
+  background: black;
+  color: #fff;
+  font-size: 0.8rem;
+  padding: 2px 5px;
+  display: none;
+}
+
+.progress-bar .time-preview.show {
+  display: block;
+}
+
+.karaoke {
+  padding: 20px 0;
+}
+
+.karaoke .karaoke-play {
+  background: blueviolet;
+  color: #fff;
+  padding: 5px 15px;
+  border: 0;
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+.karaoke .karaoke-inner.show {
+  top: 0;
+}
+
+.karaoke .karaoke-inner {
+  position: fixed;
+  inset: 0;
+  background: blueviolet;
+  color: #fff;
+  padding: 15px;
+  top: 100%;
+  transition: top 0.4s ease;
+}
+
+.karaoke .karaoke-heading {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.karaoke .karaoke-heading .close {
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.karaoke .karaoke-content {
+  height: 80vh;
+  font-size: 2rem;
+  font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.karaoke .karaoke-content p {
+  margin: 15px 0;
+}
+
+/* Thiết lập phần từ tô đè lên nội dung của từ cũ  */
+.karaoke .karaoke-content p .word {
+  position: relative;
+}
+
+.karaoke .karaoke-content p .word span {
+  position: absolute;
+  left: 0;
+  right: 0;
+  width: 0;
+  overflow: hidden;
+  color: rgb(252, 231, 0);
+}
+
+.player-wrap.bottom {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 10px;
+  z-index: 1;
+  color: #fff;
+}
+
+.player-wrap.bottom .progress-bar .progress span {
+  background: #fff;
+}

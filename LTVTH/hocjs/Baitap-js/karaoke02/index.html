@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div class="player-wrap">
+      <div class="container">
+        <div class="play-btn">
+          <i class="fa-solid fa-play"></i>
+        </div>
+        <div class="player">
+          <span>00:00</span>
+          <div class="progress-bar">
+            <div class="progress">
+              <span></span>
+            </div>
+            <span class="time-preview">00:00</span>
+          </div>
+          <span>00:00</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="karaoke">
+      <button class="karaoke-play">Hát Karaoke</button>
+      <div class="karaoke-inner">
+        <div class="container">
+          <div class="karaoke-heading">
+            <h2>Karaoke</h2>
+
+            <span class="close"><i class="fa-solid fa-angle-down"></i></span>
+          </div>
+          <!--End .karaoke-heading-->
+          <div class="karaoke-content"></div>
+        </div>
+      </div>
+      <!--End .karaoke-inner-->
+    </div>
+    <!--End .karaoke-->
+
+    <audio class="audio" src="mp3/5c355bb0b85f52cc28bd4581fde03eda.mp3"></audio>
+    <script src="js/lyric.js"></script>
+    <script src="js/script.js"></script>
+  </body>
+</html>
