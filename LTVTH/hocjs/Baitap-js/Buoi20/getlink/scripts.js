@@ -2,6 +2,7 @@ const countdownElem = document.getElementById("countdown"); // Lấy phần tử
 const buttonElem = document.getElementById("get-link"); // Lấy phần tử nút bấm
 let timeLeft = 30; // Đặt thời gian đếm ngược ban đầu là 30 giây
 let startTime; // Biến để lưu thời gian bắt đầu
+let timeoutId; // Biến để lưu ID của timeout
 
 function updateCountdown(timestamp) {
   if (!startTime) startTime = timestamp; // Thiết lập thời gian bắt đầu nếu chưa có
@@ -18,8 +19,15 @@ function updateCountdown(timestamp) {
     buttonElem.classList.add("enabled");
     buttonElem.disabled = false;
     buttonElem.style.cursor = "pointer";
-    buttonElem.onclick = () =>
-      (window.location.href = "https://fullstack-nodejs.fullstack.edu.vn/"); // Thực hiện chuyển hướng
+    buttonElem.onclick = () => {
+      clearTimeout(timeoutId); // Hủy bỏ tự động làm mới khi người dùng bấm nút
+      window.location.href = "https://fullstack-nodejs.fullstack.edu.vn/"; // Thực hiện chuyển hướng
+    };
+
+    // Thiết lập thời gian để tự động làm mới trang sau 30 giây nếu người dùng không bấm nút
+    timeoutId = setTimeout(() => {
+      location.reload(); // Tự động làm mới trang
+    }, 30000);
   } else {
     requestAnimationFrame(updateCountdown); // Tiếp tục đếm ngược nếu thời gian còn lại lớn hơn 0
   }
