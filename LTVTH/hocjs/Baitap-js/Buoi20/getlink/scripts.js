@@ -19,7 +19,7 @@ function updateCountdown(timestamp) {
     buttonElem.disabled = false;
     buttonElem.style.cursor = "pointer";
     buttonElem.onclick = () =>
-      (window.location.href = "your_download_link_here"); // Thực hiện chuyển hướng
+      (window.location.href = "https://fullstack-nodejs.fullstack.edu.vn/"); // Thực hiện chuyển hướng
   } else {
     requestAnimationFrame(updateCountdown); // Tiếp tục đếm ngược nếu thời gian còn lại lớn hơn 0
   }
