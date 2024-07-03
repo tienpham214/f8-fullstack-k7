@@ -1,0 +1,47 @@
+body {
+    background-color: #00bfff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+#container {
+    text-align: center;
+}
+
+#title {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+#countdown {
+    font-size: 48px;
+    margin-bottom: 20px;
+    color: orange;
+    border-radius: 50%;
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto 20px;
+}
+
+#get-link {
+    padding: 10px 20px;
+    font-size: 24px;
+    background-color: #ccc;
+    border: none;
+    cursor: not-allowed;
+    border-radius: 21px;
+}
+
+#get-link.enabled {
+    background-color: #ffa500;
+    cursor: pointer;
+}
