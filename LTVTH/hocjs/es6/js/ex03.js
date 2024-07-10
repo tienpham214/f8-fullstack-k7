@@ -55,7 +55,7 @@ const {
 } = output;
 console.log(displayName, email);
 
-//vd
+//vd show giá trí name trong một mảng
 
 const users = [
   { id: 1, name: "Hoàng An 1" },
