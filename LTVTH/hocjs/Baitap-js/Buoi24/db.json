@@ -1,0 +1,16 @@
+{
+  "quizzes": [
+    {
+      "id": 1,
+      "question": "Chim cánh cụt có cánh không?",
+      "options": ["Không có cánh", "2 chân", "2 tay", "2 cánh"],
+      "correctAnswer": "2 cánh"
+    },
+    {
+      "id": 2,
+      "question": "Bạn sẽ làm được bài tập về nhà này chứ?",
+      "options": ["Có", "Dễ :v", "Thôi dẹp đi"],
+      "correctAnswers": ["Có", "Dễ :v"]
+    }
+  ]
+}
