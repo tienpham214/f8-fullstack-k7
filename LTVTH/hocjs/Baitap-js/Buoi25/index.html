@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header>
+        <h1>Blogger</h1>
+        <button id="sign-in-button">Sign in</button>
+      </header>
+      <div id="auth" class="hidden">
+        <div id="login-section">
+          <h2>Đăng nhập</h2>
+          <p>
+            Hãy nhập email và mật khẩu của bạn để truy cập vào nền tảng Blogger,
+            nơi bạn có thể tạo và chia sẻ những bài viết độc đáo của mình. Nếu
+            bạn chưa có tài khoản, hãy
+            <a href="#" id="show-register">đăng ký ngay</a> để tham gia cộng
+            đồng Blogger
+          </p>
+          <form id="login-form">
+            <input
+              type="email"
+              id="login-email"
+              placeholder="Please enter the email"
+              required
+            />
+            <input
+              type="password"
+              id="login-password"
+              placeholder="Please enter the password"
+              required
+            />
+            <button type="submit">Sign in</button>
+            <button type="button" id="show-register">Sign up</button>
+          </form>
+        </div>
+        <div id="register-section" class="hidden">
+          <h2>Đăng ký</h2>
+          <p>
+            Bạn muốn tham gia cộng đồng Blogger, nơi bạn có thể tạo và chia sẻ
+            những bài viết độc đáo của mình? Hãy điền thông tin của bạn vào biểu
+            mẫu dưới đây để tạo tài khoản miễn phí. Bạn sẽ nhận được nhiều ưu
+            đãi, thông tin mới nhất và cơ hội giao lưu với những blogger khác
+            khi đăng ký. Đừng bỏ lỡ cơ hội này, hãy đăng ký ngay! Nếu bạn đã có
+            tài khoản, <a href="#" id="show-login">Đăng nhập ngay!</a>
+          </p>
+          <form id="register-form">
+            <input
+              type="text"
+              id="register-name"
+              placeholder="Please enter the name"
+              required
+            />
+            <input
+              type="email"
+              id="register-email"
+              placeholder="Please enter the email"
+              required
+            />
+            <input
+              type="password"
+              id="register-password"
+              placeholder="Please enter the password"
+              required
+            />
+            <button type="submit">Sign up</button>
+            <button type="button" id="show-login">Sign in</button>
+          </form>
+        </div>
+      </div>
+      <div id="main" class="hidden">
+        <button id="logout-button">Sign out</button>
+        <h2>Post a Blog</h2>
+        <form id="post-form" class="hidden">
+          <input
+            type="text"
+            id="post-title"
+            placeholder="Enter Your title"
+            required
+          />
+          <textarea
+            id="post-content"
+            placeholder="Enter Your content"
+            required
+          ></textarea>
+          <button type="submit">Write new!</button>
+        </form>
+        <div id="blogs"></div>
+      </div>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>
