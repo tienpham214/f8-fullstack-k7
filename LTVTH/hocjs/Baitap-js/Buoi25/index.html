@@ -11,6 +11,10 @@
       <header>
         <h1>Blogger</h1>
         <button id="sign-in-button">Sign in</button>
+        <div id="user-info" class="hidden">
+          <span id="welcome-message"></span>
+          <button id="logout-button">Sign out</button>
+        </div>
       </header>
       <div id="auth" class="hidden">
         <div id="login-section">
@@ -36,7 +40,6 @@
               required
             />
             <button type="submit">Sign in</button>
-            <button type="button" id="show-register">Sign up</button>
           </form>
         </div>
         <div id="register-section" class="hidden">
@@ -69,14 +72,12 @@
               required
             />
             <button type="submit">Sign up</button>
-            <button type="button" id="show-login">Sign in</button>
           </form>
         </div>
       </div>
       <div id="main" class="hidden">
-        <button id="logout-button">Sign out</button>
         <h2>Post a Blog</h2>
-        <form id="post-form" class="hidden">
+        <form id="post-form">
           <input
             type="text"
             id="post-title"

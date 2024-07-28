@@ -7,7 +7,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
+
 }
 
 #app {
@@ -106,3 +106,8 @@ input, textarea {
   width: 40%;
   margin: 5px;
 }
+
+a#show-register, a#show-login {
+  color: red;
+}
+ 

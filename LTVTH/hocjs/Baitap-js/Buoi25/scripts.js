@@ -6,9 +6,12 @@ document.addEventListener("DOMContentLoaded", () => {
   const postForm = document.getElementById("post-form");
   const logoutButton = document.getElementById("logout-button");
   const signInButton = document.getElementById("sign-in-button");
-  const showRegisterButton = document.getElementById("show-register");
-  const showLoginButton = document.getElementById("show-login");
+  const showRegisterLink = document.getElementById("show-register");
+  const showLoginLink = document.getElementById("show-login");
+  const userInfo = document.getElementById("user-info");
+  const welcomeMessage = document.getElementById("welcome-message");
 
+  // Event listeners for buttons and links
   signInButton.addEventListener("click", () => {
     document.getElementById("auth").classList.remove("hidden");
     document.getElementById("main").classList.add("hidden");
@@ -16,12 +19,14 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("register-section").classList.add("hidden");
   });
 
-  showRegisterButton.addEventListener("click", () => {
+  showRegisterLink.addEventListener("click", (e) => {
+    e.preventDefault();
     document.getElementById("login-section").classList.add("hidden");
     document.getElementById("register-section").classList.remove("hidden");
   });
 
-  showLoginButton.addEventListener("click", () => {
+  showLoginLink.addEventListener("click", (e) => {
+    e.preventDefault();
     document.getElementById("register-section").classList.add("hidden");
     document.getElementById("login-section").classList.remove("hidden");
   });
@@ -39,6 +44,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (data.code === 200) {
       localStorage.setItem("accessToken", data.data.accessToken);
       localStorage.setItem("refreshToken", data.data.refreshToken);
+      localStorage.setItem("userId", data.data._id);
+      localStorage.setItem("userName", data.data.name);
       showMain();
     } else {
       alert(data.message);
@@ -58,6 +65,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const data = await response.json();
     if (data.code === 201) {
       alert(data.message);
+      document.getElementById("register-section").classList.add("hidden");
+      document.getElementById("login-section").classList.remove("hidden");
     } else {
       alert(data.message);
     }
@@ -97,6 +106,8 @@ document.addEventListener("DOMContentLoaded", () => {
     if (data.code === 200) {
       localStorage.removeItem("accessToken");
       localStorage.removeItem("refreshToken");
+      localStorage.removeItem("userId");
+      localStorage.removeItem("userName");
       showAuth();
     } else {
       alert(data.message);
@@ -107,12 +118,20 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("auth").classList.add("hidden");
     document.getElementById("main").classList.remove("hidden");
     document.getElementById("post-form").classList.remove("hidden");
+    const userName = localStorage.getItem("userName");
+    welcomeMessage.textContent = `Hello, ${userName}`;
+    userInfo.classList.remove("hidden");
+    signInButton.classList.add("hidden");
     loadBlogs();
   };
 
   const showAuth = () => {
     document.getElementById("auth").classList.remove("hidden");
     document.getElementById("main").classList.add("hidden");
+    document.getElementById("login-section").classList.remove("hidden");
+    document.getElementById("register-section").classList.add("hidden");
+    signInButton.classList.remove("hidden");
+    userInfo.classList.add("hidden");
   };
 
   const loadBlogs = async () => {

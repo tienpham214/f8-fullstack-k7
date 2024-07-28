@@ -11,7 +11,7 @@ const completedCountSpan = document.querySelector("#show-finished span");
 // Fetch initial todos from db.json (assumed to be served by a local server on port 3000)
 document.addEventListener("DOMContentLoaded", async () => {
   try {
-    const response = await fetch("http://localhost:3000/todos");
+    const response = await fetch("https://ldjnnm-8080.csb.app/todos/");
     if (!response.ok) {
       throw new Error("Failed to fetch todos");
     }
@@ -46,7 +46,7 @@ formAdd.addEventListener("submit", async (e) => {
   const todoTitle = todoInput.value.trim();
   if (todoTitle) {
     try {
-      const response = await fetch("http://localhost:3000/todos", {
+      const response = await fetch("https://ldjnnm-8080.csb.app/todos/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -115,9 +115,12 @@ document.addEventListener("click", async (e) => {
   if (target.classList.contains("delete-btn")) {
     const todoId = target.getAttribute("data-id");
     try {
-      const response = await fetch(`http://localhost:3000/todos/${todoId}`, {
-        method: "DELETE",
-      });
+      const response = await fetch(
+        `https://ldjnnm-8080.csb.app/todos//${todoId}`,
+        {
+          method: "DELETE",
+        }
+      );
       if (!response.ok) {
         throw new Error("Failed to delete todo");
       }
@@ -131,15 +134,18 @@ document.addEventListener("click", async (e) => {
     const newTitle = prompt("Enter new title:", todoSpan.textContent);
     if (newTitle) {
       try {
-        const response = await fetch(`http://localhost:3000/todos/${todoId}`, {
-          method: "PATCH",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify({
-            title: newTitle,
-          }),
-        });
+        const response = await fetch(
+          `https://ldjnnm-8080.csb.app/todos//${todoId}`,
+          {
+            method: "PATCH",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            body: JSON.stringify({
+              title: newTitle,
+            }),
+          }
+        );
         if (!response.ok) {
           throw new Error("Failed to update todo");
         }
@@ -151,15 +157,18 @@ document.addEventListener("click", async (e) => {
   } else if (target.classList.contains("mark-finished-btn")) {
     const todoId = target.getAttribute("data-id");
     try {
-      const response = await fetch(`http://localhost:3000/todos/${todoId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          status: "finished",
-        }),
-      });
+      const response = await fetch(
+        `https://ldjnnm-8080.csb.app/todos//${todoId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            status: "finished",
+          }),
+        }
+      );
       if (!response.ok) {
         throw new Error("Failed to mark todo as finished");
       }
@@ -178,15 +187,18 @@ document.addEventListener("click", async (e) => {
   } else if (target.classList.contains("unmark-finished-btn")) {
     const todoId = target.getAttribute("data-id");
     try {
-      const response = await fetch(`http://localhost:3000/todos/${todoId}`, {
-        method: "PATCH",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify({
-          status: "unfinished",
-        }),
-      });
+      const response = await fetch(
+        `https://ldjnnm-8080.csb.app/todos//${todoId}`,
+        {
+          method: "PATCH",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            status: "unfinished",
+          }),
+        }
+      );
       if (!response.ok) {
         throw new Error("Failed to unmark todo as finished");
       }
@@ -208,7 +220,9 @@ document.addEventListener("click", async (e) => {
 // Function to update completed count
 async function updateCompletedCount() {
   try {
-    const response = await fetch("http://localhost:3000/todos?status=finished");
+    const response = await fetch(
+      "https://ldjnnm-8080.csb.app/todos/?status=finished"
+    );
     if (!response.ok) {
       throw new Error("Failed to fetch completed todos");
     }
