@@ -7,7 +7,11 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+<<<<<<< HEAD
 
+=======
+ 
+>>>>>>> c5ac92e406e00bf74ac051cd5bb3089d4ca937d6
 }
 
 #app {
@@ -110,4 +114,8 @@ input, textarea {
 a#show-register, a#show-login {
   color: red;
 }
+<<<<<<< HEAD
  
+=======
+ 
+>>>>>>> c5ac92e406e00bf74ac051cd5bb3089d4ca937d6
